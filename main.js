@@ -1,170 +1,223 @@
-/**
- * Smart Paving & Landscaping - Main Interactivity Script
- * Focus: Premium transitions and conversion optimization.
- */
+(function () {
+    'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navigation Scroll Effect
-    const nav = document.querySelector('nav');
-    
+    // 1. Hero Subtle Zoom Animation Trigger
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        setTimeout(() => hero.classList.add('loaded'), 100);
+    }
+
+    // 2. Navigation Scroll Effect
+    const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
+        if (window.scrollY > 40) {
+            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
+            header.style.background = 'rgba(255,255,255,0.98)';
         } else {
-            nav.classList.remove('scrolled');
+            header.style.boxShadow = '';
+            header.style.background = '#fff';
         }
     });
 
-    // 2. Reveal Animations on Scroll (Intersection Observer)
-    const revealElements = document.querySelectorAll('.reveal');
+    // 3. Mobile Navigation Drawer Toggling
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const drawerClose = document.getElementById('drawer-close');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    function openDrawer() {
+        drawer.classList.add('open');
+        overlay.classList.add('active');
+        hamburger.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent main page scrolling
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove('open');
+        overlay.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = ''; // Restore main page scrolling
+    }
+
+    if (hamburger) hamburger.addEventListener('click', openDrawer);
+    if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
     
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target); // Animate once
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
     });
 
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
-    });
-
-    // 3. Smooth Scrolling for Navigation Links
+    // 4. Smooth Scrolling for Navigation Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
+            const id = this.getAttribute('href');
+            if (id === '#') return;
+            const targetElement = document.querySelector(id);
+            if (targetElement) {
+                e.preventDefault();
+                const headerH = document.getElementById('site-header')?.offsetHeight || 88;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerH;
+                
                 window.scrollTo({
-                    top: target.offsetTop - 80, // Offset for fixed nav
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-    // 4. Lucide Icons refresh (to ensure dynamically added icons work if any)
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
+    // 5. Scroll Reveal Animations (Intersection Observer)
+    const revealTargets = document.querySelectorAll(
+        '.svc-card, .tcard, .g-item, .builders-content, .about-text, .about-img, .areas-inner, .gallery-header, .ba-header, .ba-card, .risk-card, .risks-header'
+    );
 
-    // 5. View More Projects
-    const viewMoreBtn = document.getElementById('view-more-btn');
-    const hiddenItems = document.querySelectorAll('.hidden-gallery-item');
-    
-    if (viewMoreBtn) {
-        viewMoreBtn.addEventListener('click', () => {
-            hiddenItems.forEach(item => {
-                item.classList.add('show');
-                // Re-observe for reveal animations
-                revealObserver.observe(item);
-            });
-            viewMoreBtn.style.display = 'none';
-        });
-    }
+    const observerOptions = {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+    };
 
-    // 6. Lightbox Functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const galleryImages = document.querySelectorAll('.gallery-item img');
-
-    galleryImages.forEach(img => {
-        // Stop shimmer when loaded
-        if (img.complete) {
-            img.style.opacity = '1';
-            img.parentElement.style.animation = 'none';
-        } else {
-            img.addEventListener('load', () => {
-                img.style.opacity = '1';
-                img.parentElement.style.animation = 'none';
-            });
-        }
-
-        img.addEventListener('click', () => {
-            lightbox.style.display = 'block';
-            lightboxImg.src = img.src;
-            const caption = img.parentElement.querySelector('h4').innerText;
-            const subCaption = img.parentElement.querySelector('p').innerText;
-            lightboxCaption.innerHTML = `${caption} <br> <span style="font-size: 0.9rem; font-weight: 400; color: #aaa;">${subCaption}</span>`;
-            document.body.style.overflow = 'hidden'; // Prevent scroll
-        });
-    });
-
-    if (lightboxClose) {
-        lightboxClose.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-    }
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-
-    // 7. Stat Counter Animation
-    const counters = document.querySelectorAll('.stat-number');
-    const counterObserver = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = +entry.target.getAttribute('data-target');
-                const count = +entry.target.innerText;
-                const increment = target / 50;
-
-                const updateCount = () => {
-                    const current = +entry.target.innerText;
-                    if (current < target) {
-                        entry.target.innerText = Math.ceil(current + increment);
-                        setTimeout(updateCount, 40);
-                    } else {
-                        entry.target.innerText = target;
-                    }
-                };
-                updateCount();
-                counterObserver.unobserve(entry.target);
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 1 });
+    }, observerOptions);
 
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    // 9. Hero Parallax
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', () => {
-        const offset = window.pageYOffset;
-        if (hero) {
-            hero.style.backgroundPositionY = offset * 0.5 + 'px';
-        }
+    revealTargets.forEach((el, index) => {
+        // Initial hidden states
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${(index % 4) * 0.08}s, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${(index % 4) * 0.08}s`;
+        revealObserver.observe(el);
     });
-    // 10. Contact Form Simulation
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
 
+    // 6. Gallery Lightbox Functionality
+    const galleryItems = document.querySelectorAll('.g-item');
+    
+    // Create lightbox elements dynamically
+    const lbContainer = document.createElement('div');
+    lbContainer.id = 'custom-lightbox';
+    lbContainer.innerHTML = `
+        <div class="lb-backdrop"></div>
+        <div class="lb-content-wrapper">
+            <button class="lb-close-btn" aria-label="Close Lightbox">&times;</button>
+            <img class="lb-active-img" src="" alt="">
+            <div class="lb-caption-text"></div>
+        </div>
+    `;
+    document.body.appendChild(lbContainer);
+
+    // Inject styles for lightbox
+    const lbStyle = document.createElement('style');
+    lbStyle.textContent = `
+        #custom-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        #custom-lightbox.open {
+            display: flex;
+        }
+        .lb-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 15, 8, 0.94);
+            cursor: pointer;
+        }
+        .lb-content-wrapper {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90vw;
+        }
+        .lb-active-img {
+            max-height: 82vh;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            display: block;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+        .lb-active-img.loaded {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .lb-close-btn {
+            position: absolute;
+            top: -48px;
+            right: 0;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.8rem;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.75;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+        .lb-close-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .lb-caption-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            margin-top: 14px;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+    `;
+    document.head.appendChild(lbStyle);
+
+    const lbBackdrop = lbContainer.querySelector('.lb-backdrop');
+    const lbCloseBtn = lbContainer.querySelector('.lb-close-btn');
+    const lbImg = lbContainer.querySelector('.lb-active-img');
+    const lbCaption = lbContainer.querySelector('.lb-caption-text');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const originalImg = item.querySelector('img');
+            const captionContent = item.querySelector('.gi-caption')?.textContent || originalImg.alt;
+            
+            lbImg.src = originalImg.src;
+            lbImg.alt = originalImg.alt;
+            lbCaption.textContent = captionContent;
+            
+            lbContainer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Subtle fade/zoom transition for active image
             setTimeout(() => {
-                btn.innerText = 'Message Sent!';
-                btn.style.backgroundColor = '#25D366';
-                contactForm.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
+                lbImg.classList.add('loaded');
+            }, 50);
         });
+    });
+
+    function closeLightbox() {
+        lbImg.classList.remove('loaded');
+        setTimeout(() => {
+            lbContainer.classList.remove('open');
+            document.body.style.overflow = '';
+        }, 200);
     }
-});
+
+    lbBackdrop.addEventListener('click', closeLightbox);
+    lbCloseBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+})();
