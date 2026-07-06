@@ -18,7 +18,7 @@ Photos are stored in the `Assest/` and `images/` folders.
     3. Copy an existing `<div class="gallery-item">` block and change the `src` attribute to your new image name.
 
 ### 3. Changing Your Phone Number or WhatsApp
-Search for `260973316286` in `index.html` and replace it with your new number. Make sure to keep the country code (e.g., `260`) for the WhatsApp link.
+Search for `255662254777` in `index.html` and replace it with your new number. Make sure to keep the country code (e.g., `255`) for the WhatsApp link.
 
 ### 4. Updating Services
 Find the `<div class="services-grid">` section in `index.html`. You can edit the service titles, descriptions, and icons (using Lucide icon names).

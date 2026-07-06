@@ -1,26 +1,26 @@
 /* =============================================
-   RACCOON ROOF RANGER — style.css
-   Brand: St. Patrick's Shamrock Green + Irish Gold
+   FRANCHO ROOF & PAVEMENT CLEANER — style.css
+   Brand: Ocean Navy Blue + Water Splash Cyan
    ============================================= */
 
 /* ===== ROOT VARS ===== */
 :root {
     /* Brand colours */
-    --green-deep:   #1b4012; /* Deep Irish Forest Green */
-    --green-mid:    #2d7023; /* Shamrock Green */
-    --green-olive:  #3b6631; /* Cards Section Bg Green */
-    --green-light:  #70ab60;
-    --gold:         #d4a017; /* Irish Gold Accent */
-    --gold-light:   #e8b931;
+    --green-deep:   #062c54; /* Deep Ocean Navy Blue */
+    --green-mid:    #00a2bd; /* Splash Water Cyan */
+    --green-olive:  #081d35; /* Navy cards section background */
+    --green-light:  #38bdf8; /* Soft light cyan */
+    --gold:         #f59e0b; /* Amber/Gold Accent (stars & warnings) */
+    --gold-light:   #88e1f2; /* Light cyan highlights */
 
     /* Page tones */
-    --cream:        #f7f5ef; /* Soft Light Cream Bg */
-    --charcoal:     #161616;
-    --text:         #242424;
-    --text-mid:     #5e5e5e;
+    --cream:        #f0f6fc; /* Soft ice blue cream background */
+    --charcoal:     #0b1329; /* Deep navy/charcoal footer */
+    --text:         #1e293b; /* Slate 800 */
+    --text-mid:     #475569; /* Slate 600 */
 
     /* Typography */
-    --serif:   'Cormorant Garamond', Georgia, serif;
+    --serif:   'Outfit', 'DM Sans', sans-serif;
     --sans:    'DM Sans', sans-serif;
 
     --hh: 88px; /* header height */
@@ -567,16 +567,13 @@ ul { list-style: none; }
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 260px 260px;
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
-.gi { overflow: hidden; border-radius: 3px; background: #eee; cursor: pointer; }
+.gi { overflow: hidden; border-radius: 3px; background: #eee; cursor: pointer; aspect-ratio: 16/9; }
 .gi img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .gi:hover img { transform: scale(1.06); }
-.gi-tall  { grid-row: span 2; }
-.gi-wide  { grid-column: span 2; }
 
 /* ===========================
    BEFORE & AFTER
