@@ -1,496 +1,667 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francho Roof & Pavement Cleaner | Professional Pressure Washing Dar es Salaam</title>
-    <meta name="description" content="Francho Roof & Pavement Cleaner – 5-Star rated roof, driveway, pavement, and wall pressure washing services in Dar es Salaam. We restore your home's beauty! Call 0662 254 777.">
+    <title>Brickscapes | Brickwork &amp; Landscaping Specialists Glasgow &amp; Clydebank</title>
+    <meta name="description" content="Brickscapes – Joe Church &amp; Team. Premier brickwork and landscaping specialists in Clydebank, Glasgow &amp; the West of Scotland. Facing brick retaining walls, extensions, garages, steps, repointing, patios &amp; paving, fencing, and artificial grass. Call 07700 900 123 for a free quote!">
+    <meta name="keywords" content="Bricklayers Glasgow, Brickwork Specialists Clydebank, Retaining Walls Glasgow, Valhalla Paving Laird, Patios Glasgow, Fencing Glasgow, Artificial Grass Glasgow, Joe Church Brickscapes">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Brickscapes | Brickwork &amp; Landscaping Specialists Glasgow">
+    <meta property="og:description" content="Building your dreams, brick by brick. Gardens and homes transformed across Clydebank, Glasgow &amp; the West.">
+    <meta property="og:image" content="images/hero_bg.jpg">
+    <meta property="og:type" content="website">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
 
-    <!-- Fonts -->
+    <!-- Google Fonts: Cinzel, Cormorant Garamond, Montserrat, Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Stylesheet -->
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Design Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="turfworld-theme">
 
     <!-- ===========================
-         STICKY HEADER
+         HERO SECTION WITH INTEGRATED OVERLAY HEADER (REF LAYOUT + BRICKSCAPES COPY)
     ============================ -->
-    <header class="site-header" id="site-header">
-        <div class="header-inner">
+    <section class="tw-hero-section">
+        <!-- Hero Background Layer -->
+        <div class="tw-hero-bg-layer">
+            <img src="images/hero_bg.jpg" alt="Brickscapes Luxury Landscaping & Retaining Wall Glasgow" class="tw-hero-bg-img">
+            <div class="tw-hero-vignette-overlay"></div>
+        </div>
 
-            <a href="#" class="header-logo" id="logo-link">
-                <img src="images/logo.png" alt="Francho Roof & Pavement Cleaner Logo" class="logo-img">
-                <span class="logo-text">Francho</span>
-            </a>
+        <!-- Integrated Header Navigation -->
+        <header class="tw-hero-header">
+            <div class="tw-header-top-row">
+                <!-- Social Circles Left -->
+                <div class="tw-social-circles">
+                    <a href="https://www.instagram.com/brickscapes1" target="_blank" aria-label="Instagram" class="tw-soc-circle" title="@brickscapes1"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/447700900123" target="_blank" aria-label="WhatsApp" class="tw-soc-circle" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:07700900123" aria-label="Phone Call" class="tw-soc-circle" title="Call Joe Direct"><i class="fa-solid fa-phone"></i></a>
+                </div>
 
-            <nav class="header-nav" id="header-nav">
-                <a href="#services" class="hn-link">Services</a>
-                <a href="#gallery" class="hn-link">Gallery</a>
-                <a href="#about" class="hn-link">About Us</a>
-                <a href="#areas" class="hn-link">Areas</a>
-                <a href="#contact" class="hn-link hn-cta">Book a Quote</a>
-            </nav>
+                <!-- Center Logo Block -->
+                <div class="tw-center-logo-block">
+                    <a href="#" class="tw-logo-link">
+                        <span class="tw-logo-title">BRICKSCAPES</span>
+                    </a>
+                </div>
 
-            <div class="header-socials" id="header-socials">
-                <a href="https://www.instagram.com/franchoroofpavementcleaner" target="_blank" aria-label="Instagram" class="soc-link" id="hdr-ig">
-                    <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </a>
-                <a href="https://wa.me/255662254777?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20cleaning%20services." target="_blank" aria-label="WhatsApp" class="soc-link" id="hdr-wa">
-                    <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                </a>
-                <a href="tel:0662254777" aria-label="Call us" class="soc-link" id="hdr-phone">
-                    <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                </a>
+                <!-- Right Contact & Cart -->
+                <div class="tw-header-right-block">
+                    <a href="tel:07700900123" class="tw-phone-number">07700 900 123</a>
+                    <a href="#contact" class="tw-btn-contact-gold">FREE QUOTE</a>
+                    <a href="https://wa.me/447700900123?text=Hi%20Joe%2C%20I%20would%20like%20a%20free%20quote!" target="_blank" class="tw-cart-badge-gold" title="Quick WhatsApp Quote">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <button class="tw-mob-toggle" id="tw-mob-toggle" aria-label="Toggle Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+            <!-- Sub Navigation Menu Links (Flyer Copy) -->
+            <nav class="tw-center-subnav">
+                <a href="#brickwork" class="tw-subnav-link">BRICKWORK</a>
+                <a href="#landscapes" class="tw-subnav-link">LANDSCAPES</a>
+                <a href="#patios" class="tw-subnav-link">PATIOS &amp; PAVING</a>
+                <a href="#walls" class="tw-subnav-link">RETAINING WALLS</a>
+                <a href="#fencing" class="tw-subnav-link">FENCING &amp; GATES</a>
+                <a href="#gallery" class="tw-subnav-link">OUR WORK</a>
+                <a href="#contact" class="tw-subnav-link">CONTACT</a>
+            </nav>
+        </header>
 
-    <!-- Mobile Drawer -->
-    <div class="mob-overlay" id="drawer-overlay"></div>
-    <div class="mob-drawer" id="mobile-drawer">
-        <button class="mob-close" id="drawer-close">&times;</button>
-        <nav class="mob-nav">
-            <a href="#services" class="mob-link drawer-link" id="ml-services">Services</a>
-            <a href="#gallery" class="mob-link drawer-link" id="ml-gallery">Gallery</a>
-            <a href="#about"    class="mob-link drawer-link" id="ml-about">About Us</a>
-            <a href="#areas"    class="mob-link drawer-link" id="ml-areas">Areas</a>
-            <a href="#contact"  class="mob-link drawer-link" id="ml-contact">Book a Quote</a>
-        </nav>
-        <div class="mob-actions">
-            <a href="tel:0662254777" class="mob-btn mb-green" id="mob-call">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                0662 254 777
+        <!-- Mobile Drawer -->
+        <div class="tw-drawer-overlay" id="tw-drawer-overlay"></div>
+        <div class="tw-drawer" id="tw-drawer">
+            <div class="tw-drawer-head">
+                <div class="tw-brand-text">
+                    <span class="tw-brand-name">BRICKSCAPES</span>
+                    <span class="tw-brand-sub">Joe Church &amp; Team | Glasgow</span>
+                </div>
+                <button class="tw-drawer-close" id="tw-drawer-close">&times;</button>
+            </div>
+            <div class="tw-drawer-body">
+                <nav class="tw-drawer-nav">
+                    <a href="#brickwork" class="tw-drawer-link"><i class="fa-solid fa-trowel-bricks"></i> Brickwork Specialists</a>
+                    <a href="#landscapes" class="tw-drawer-link"><i class="fa-solid fa-tree"></i> Landscape Transformations</a>
+                    <a href="#patios" class="tw-drawer-link"><i class="fa-solid fa-border-all"></i> Patios &amp; Paving</a>
+                    <a href="#walls" class="tw-drawer-link"><i class="fa-solid fa-cubes"></i> Retaining Walls</a>
+                    <a href="#fencing" class="tw-drawer-link"><i class="fa-solid fa-fence"></i> Fencing &amp; Gates</a>
+                    <a href="#gallery" class="tw-drawer-link"><i class="fa-solid fa-images"></i> Project Gallery</a>
+                    <a href="#contact" class="tw-drawer-link"><i class="fa-solid fa-envelope"></i> Free Quote Contact</a>
+                </nav>
+                <div class="tw-drawer-actions">
+                    <a href="tel:07700900123" class="btn-tw-green-block"><i class="fa-solid fa-phone"></i> Call Joe: 07700 900 123</a>
+                    <a href="https://wa.me/447700900123" target="_blank" class="btn-tw-gold-block"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Centered Content (Client Motto) -->
+        <div class="tw-hero-main-content">
+            <h1 class="tw-serif-hero-title">
+                BRICKWORK &amp;<br>LANDSCAPES
+            </h1>
+            <p class="tw-serif-hero-subtitle">
+                BUILDING YOUR DREAMS, BRICK BY BRICK — CLYDEBANK, GLASGOW &amp; THE WEST
+            </p>
+            <a href="#contact" class="tw-hero-shop-btn">
+                GET A FREE QUOTE
             </a>
-            <a href="https://wa.me/255662254777?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20cleaning%20services." class="mob-btn mb-gold" id="mob-wa" target="_blank">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
+        </div>
+    </section>
+
+    <!-- ===========================
+         1. 4-COLUMN IMAGE TILES NAV GRID (REF SCREENSHOT 1)
+    ============================ -->
+    <section class="tw-nav-tiles-section">
+        <div class="tw-nav-tiles-grid">
+            
+            <a href="#story" class="tw-nav-tile-item">
+                <img src="images/before_garden.jpg" alt="About Brickscapes Glasgow" class="tw-nav-tile-img">
+                <div class="tw-nav-tile-overlay">
+                    <h3 class="tw-tile-title">ABOUT US</h3>
+                </div>
             </a>
+
+            <a href="#contact" class="tw-nav-tile-item">
+                <img src="images/hero_bg.jpg" alt="Contact Brickscapes Clydebank" class="tw-nav-tile-img">
+                <div class="tw-nav-tile-overlay">
+                    <h3 class="tw-tile-title">CONTACT US</h3>
+                </div>
+            </a>
+
+            <a href="#gallery" class="tw-nav-tile-item">
+                <img src="images/turf_roll.jpg" alt="Brickscapes Work Proofs" class="tw-nav-tile-img">
+                <div class="tw-nav-tile-overlay">
+                    <h3 class="tw-tile-title">OUR WORK</h3>
+                </div>
+            </a>
+
+            <a href="#patios" class="tw-nav-tile-item">
+                <img src="images/after_garden.jpg" alt="Landscaping FAQs Glasgow" class="tw-nav-tile-img">
+                <div class="tw-nav-tile-overlay">
+                    <h3 class="tw-tile-title">FAQS</h3>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ===========================
+         2. SPLIT "EXPERIENCE YOU CAN TRUST" SECTION (REF SCREENSHOT 2)
+    ============================ -->
+    <section class="tw-split-exp-section" id="story">
+        <div class="tw-split-exp-container">
+            <div class="tw-split-exp-image">
+                <img src="images/turf_hero.jpg" alt="Brickscapes Experience You Can Trust Glasgow">
+            </div>
+            <div class="tw-split-exp-box">
+                <h2>EXPERIENCE YOU CAN TRUST</h2>
+                <p>
+                    Brickscapes is a proud family-run business established with years of expertise in brickwork &amp; landscaping across Clydebank, Glasgow, and the West. We take pride in building garden retaining walls, Valhalla paving patios, and outdoor living spaces of exceptional quality, ensuring every job meets the highest standards.
+                </p>
+                <a href="#patios" class="tw-btn-tan-pill">OUR SERVICES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         3. THREE-COLUMN TRUST HIGHLIGHTS (EXACT FLYER SERVICES)
+    ============================ -->
+    <section class="tw-section tw-trust-section">
+        <div class="tw-container">
+            <div class="tw-trust-grid">
+                
+                <div class="tw-trust-card" id="brickwork">
+                    <div class="tw-trust-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    <h3>BRICKWORK SPECIALISTS</h3>
+                    <p>Garden and retaining walls, domestic extensions, garage substructures, precision entrance steps, coping stones, repointing, and mortar repairs.</p>
+                </div>
+
+                <div class="tw-trust-card" id="landscapes">
+                    <div class="tw-trust-icon"><i class="fa-solid fa-border-all"></i></div>
+                    <h3>LANDSCAPE TRANSFORMATIONS</h3>
+                    <p>Valhalla paving by Laird, porcelain &amp; sandstone patios with feature circles &amp; charcoal borders, slatted timber fencing, and artificial grass.</p>
+                </div>
+
+                <div class="tw-trust-card">
+                    <div class="tw-trust-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>GLASGOW &amp; CLYDEBANK EXPERTS</h3>
+                    <p>Serving Clydebank, Bearsden, Newton Mearns, Giffnock, Clarkston, Paisley &amp; Loch Lomond with fixed quotes and clean site guarantee.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         4. REAL CLIENT INSTAGRAM TRANSFORMATION FEATURE (EXACT CAPTION COPY)
+    ============================ -->
+    <section class="tw-section tw-why-section">
+        <div class="tw-container">
+            <div class="tw-why-grid">
+                <div class="tw-why-content">
+                    <span class="tw-section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> REAL CLYDEBANK PROJECT STORY</span>
+                    <h2>From Tired &amp; Dated to a <br><span class="tw-highlight-gold">Patio Built to Last 👏</span></h2>
+                    <p class="tw-why-lead">
+                        "We transformed this old decking and gravel area into a stunning new patio using <strong>Valhalla paving by Laird</strong>, complete with a feature circle, charcoal border and decorative stone edging. Another happy customer and another garden ready to enjoy!"
+                    </p>
+
+                    <div class="tw-why-list">
+                        <div class="tw-why-item">
+                            <div class="tw-item-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Valhalla Paving by Laird</h4>
+                                <p>Premium high-durability paving slabs laid on full mortar beds with slurry primer.</p>
+                            </div>
+                        </div>
+
+                        <div class="tw-why-item">
+                            <div class="tw-item-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Bespoke Feature Circle &amp; Charcoal Border</h4>
+                                <p>Precision curved border cuts and contrasting stone edging for a luxury finish.</p>
+                            </div>
+                        </div>
+
+                        <div class="tw-why-item">
+                            <div class="tw-item-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4>Location: 📍 Clydebank</h4>
+                                <p>Brickscapes – Building your dreams, brick by brick.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:28px;">
+                        <a href="https://wa.me/447700900123?text=Hi%20Joe%2C%20I%20saw%20your%20Clydebank%20patio%20transformation%20and%20want%20a%20quote!" target="_blank" class="btn-tw-gold">
+                            <i class="fa-brands fa-whatsapp"></i> Request Free Patio Quote
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tw-why-image">
+                    <div class="tw-image-box">
+                        <img src="images/after_garden.jpg" alt="Valhalla Paving Patio Clydebank Transformation">
+                        <div class="tw-image-badge">
+                            <i class="fa-solid fa-location-dot"></i> Clydebank Project Completed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         5. GOOGLE REVIEWS SECTION (REF SCREENSHOT 3)
+    ============================ -->
+    <section class="tw-reviews-section">
+        <div class="tw-container">
+            <div class="tw-reviews-wrapper">
+                
+                <div class="tw-google-badge-card">
+                    <h3>EXCELLENT</h3>
+                    <div class="tw-google-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="tw-google-count">Based on 133 reviews</div>
+                    <div class="tw-google-logo">
+                        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+                    </div>
+                </div>
+
+                <div class="tw-reviews-grid">
+                    <div class="tw-review-card">
+                        <div class="tw-rev-user">
+                            <div class="tw-avatar">W</div>
+                            <div>
+                                <div class="tw-rev-name">Warren Jones</div>
+                                <div class="tw-rev-date">6 months ago</div>
+                            </div>
+                        </div>
+                        <div class="tw-rev-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="tw-rev-text">Fast service and great quality! Joe and team transformed our patchy garden with new Valhalla paving and retaining wall. Highly recommend!</p>
+                    </div>
+
+                    <div class="tw-review-card">
+                        <div class="tw-rev-user">
+                            <div class="tw-avatar">J</div>
+                            <div>
+                                <div class="tw-rev-name">John Woodhall</div>
+                                <div class="tw-rev-date">10 months ago</div>
+                            </div>
+                        </div>
+                        <div class="tw-rev-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="tw-rev-text">Really helpful when you call and the quality is amazing. Not many places you can get master bricklaying and patio work done this cleanly!</p>
+                    </div>
+
+                    <div class="tw-review-card">
+                        <div class="tw-rev-user">
+                            <div class="tw-avatar">J</div>
+                            <div>
+                                <div class="tw-rev-name">Jill Lees</div>
+                                <div class="tw-rev-date">10 months ago</div>
+                            </div>
+                        </div>
+                        <div class="tw-rev-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="tw-rev-text">Easy order and delivery, courtesy call from Joe to check it was the correct property. Extremely professional team.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         7. ADVICE & GUIDES GRID (REF SCREENSHOT 3)
+    ============================ -->
+    <section class="tw-guides-section">
+        <div class="tw-container">
+            <div class="tw-guides-grid">
+                
+                <div class="tw-guide-card">
+                    <div class="tw-guide-img">
+                        <img src="images/turf_roll.jpg" alt="Establishing a New Lawn">
+                    </div>
+                    <h3>Establishing a New Lawn: Essential Tips for Sowing &amp; Turf Efficiently</h3>
+                </div>
+
+                <div class="tw-guide-card">
+                    <div class="tw-guide-img">
+                        <img src="images/hero_bg.jpg" alt="Keeping Your Grass Healthy With Dogs Around">
+                    </div>
+                    <h3>Keeping Your Grass &amp; Patios Healthy With Dogs &amp; Pets Around</h3>
+                </div>
+
+                <div class="tw-guide-card">
+                    <div class="tw-guide-img">
+                        <img src="images/after_garden.jpg" alt="How Long After Laying Turf Can You Walk on It">
+                    </div>
+                    <h3>How Long After Laying Turf &amp; Paving Can You Walk on It?</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         8. CORE SERVICES GRID (MATCHING CLIENT FLYER)
+    ============================ -->
+    <section class="tw-section tw-products-section" id="patios">
+        <div class="tw-container">
+            <div class="tw-section-head text-center">
+                <span class="tw-section-tag"><i class="fa-solid fa-layer-group"></i> OUR CORE SERVICES</span>
+                <h2>Brickwork &amp; Landscape <span class="tw-highlight-gold">Services</span></h2>
+                <p>Everything listed on our official Brickscapes flyer — executed to master craftsmanship standards.</p>
+            </div>
+
+            <div class="tw-products-grid">
+                <div class="tw-prod-card" id="walls">
+                    <div class="tw-prod-img">
+                        <img src="Assest/20251016_101126.jpg" alt="Facing Brick Retaining Walls Glasgow">
+                        <span class="tw-prod-badge">BRICKWORK</span>
+                    </div>
+                    <div class="tw-prod-content">
+                        <div class="tw-prod-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(5.0/5)</span>
+                        </div>
+                        <h3>Garden &amp; Retaining Walls</h3>
+                        <p>Facing brick retaining walls, decorative garden boundary walls, concrete footings, weep holes, and coping caps.</p>
+                        <div class="tw-prod-footer">
+                            <div class="tw-prod-price">Free Site Survey</div>
+                            <a href="#contact" class="btn-tw-gold-xs">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-prod-card">
+                    <div class="tw-prod-img">
+                        <img src="Assest/20251212_182714.jpg" alt="Extensions and Garages Brickwork Glasgow">
+                        <span class="tw-prod-badge">BRICKWORK</span>
+                    </div>
+                    <div class="tw-prod-content">
+                        <div class="tw-prod-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(5.0/5)</span>
+                        </div>
+                        <h3>Extensions &amp; Garages</h3>
+                        <p>Structural brick masonry substructures, garage builds, damp-proof courses (DPC), and brick pier walling.</p>
+                        <div class="tw-prod-footer">
+                            <div class="tw-prod-price">Free Site Survey</div>
+                            <a href="#contact" class="btn-tw-gold-xs">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-prod-card">
+                    <div class="tw-prod-img">
+                        <img src="Assest/20251209_123126.jpg" alt="Valhalla Paving & Porcelain Patios">
+                        <span class="tw-prod-badge">LANDSCAPES</span>
+                    </div>
+                    <div class="tw-prod-content">
+                        <div class="tw-prod-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(5.0/5)</span>
+                        </div>
+                        <h3>Patios &amp; Paving (Valhalla &amp; Porcelain)</h3>
+                        <p>Valhalla paving by Laird with feature circles, anti-slip Italian porcelain slabs, Indian sandstone &amp; charcoal borders.</p>
+                        <div class="tw-prod-footer">
+                            <div class="tw-prod-price">Free Site Survey</div>
+                            <a href="#contact" class="btn-tw-gold-xs">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         9. WORK GALLERY (FILTERABLE + LIGHTBOX)
+    ============================ -->
+    <section class="tw-section tw-gallery-section" id="gallery">
+        <div class="tw-container">
+            <div class="tw-section-head text-center">
+                <span class="tw-section-tag"><i class="fa-solid fa-camera"></i> REAL WORK PROOFS</span>
+                <h2>Recent Glasgow &amp; Clydebank <span class="tw-highlight-gold">Projects</span></h2>
+                <p>Browse genuine bricklaying, patio installations, and garden transformations by Joe Church &amp; team.</p>
+            </div>
+
+            <div class="tw-gallery-filters">
+                <button class="tw-filter-btn active" data-filter="all">All Projects</button>
+                <button class="tw-filter-btn" data-filter="brickwork">Brickwork Walls</button>
+                <button class="tw-filter-btn" data-filter="patio">Patios &amp; Valhalla</button>
+                <button class="tw-filter-btn" data-filter="fencing">Fencing &amp; Turf</button>
+            </div>
+
+            <div class="tw-gallery-grid">
+                <div class="tw-gal-item" data-category="patio">
+                    <img src="images/after_garden.jpg" alt="Valhalla Paving Patio Clydebank">
+                    <div class="tw-gal-overlay">
+                        <span>Clydebank</span>
+                        <h4>Valhalla Paving Patio &amp; Feature Circle</h4>
+                    </div>
+                </div>
+
+                <div class="tw-gal-item" data-category="brickwork">
+                    <img src="Assest/20251016_101126.jpg" alt="Facing Brick Retaining Wall Newton Mearns">
+                    <div class="tw-gal-overlay">
+                        <span>Newton Mearns</span>
+                        <h4>Facing Brick Retaining Wall</h4>
+                    </div>
+                </div>
+
+                <div class="tw-gal-item" data-category="patio">
+                    <img src="Assest/20251209_123126.jpg" alt="Porcelain Patio Paving Bearsden">
+                    <div class="tw-gal-overlay">
+                        <span>Bearsden</span>
+                        <h4>Porcelain Patio &amp; Drainage</h4>
+                    </div>
+                </div>
+
+                <div class="tw-gal-item" data-category="fencing">
+                    <img src="images/1P.jpg" alt="Slatted Timber Fencing Giffnock">
+                    <div class="tw-gal-overlay">
+                        <span>Giffnock</span>
+                        <h4>Contemporary Slatted Fencing</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="tw-lightbox" id="tw-lightbox">
+        <div class="tw-lb-overlay" id="tw-lb-overlay"></div>
+        <div class="tw-lb-box">
+            <button class="tw-lb-close" id="tw-lb-close">&times;</button>
+            <img src="" id="tw-lb-img" alt="Enlarged Project Photo">
+            <div class="tw-lb-cap" id="tw-lb-cap"></div>
         </div>
     </div>
 
-
     <!-- ===========================
-         HERO — full width, centered title + italic tagline
+         10. CONTACT & QUOTE FORM
     ============================ -->
-    <section class="hero" id="hero">
-        <div class="hero-bg" style="background-image:url('images/about_roof.png'); background-position: center center;"></div>
-        <div class="hero-scrim"></div>
-        <div class="hero-content">
-            <h1>Francho</h1>
-            <p class="hero-sub">Roof &amp; Pavement Cleaner</p>
-        </div>
-        <!-- Wave bottom -->
-        <div class="hero-wave">
-            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="var(--green-olive)"/>
-            </svg>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         SERVICE CARDS — dark green/navy bg
-    ============================ -->
-    <section class="cards-section" id="services">
-        <!-- Decorative dots -->
-        <div class="dot-tl"></div>
-        <div class="dot-br"></div>
-
-        <div class="cards-grid">
-
-            <!-- Roof Cleaning & Treatment -->
-            <a href="#contact" class="svc-card" id="sc-roof">
-                <div class="svc-img">
-                    <img src="images/before_roof.png" alt="Roof Cleaning & Moss Removal">
-                </div>
-                <div class="svc-label">Roof Cleaning &amp; Treatment</div>
-            </a>
-
-            <!-- Pavement & Driveway Washing -->
-            <a href="#contact" class="svc-card" id="sc-pavement">
-                <div class="svc-img">
-                    <img src="images/service-driveway.png" alt="Pavement & Driveway Washing">
-                </div>
-                <div class="svc-label">Pavement &amp; Driveway Washing</div>
-            </a>
-
-            <!-- Wall Mold & Algae Removal -->
-            <a href="#contact" class="svc-card" id="sc-wall">
-                <div class="svc-img">
-                    <img src="images/wall_cleaning.png" alt="Wall Mold & Algae Removal">
-                </div>
-                <div class="svc-label">Wall Mold &amp; Algae Removal</div>
-            </a>
-
-            <!-- Patio & Outdoor Surface Washing -->
-            <a href="#contact" class="svc-card" id="sc-pressure">
-                <div class="svc-img">
-                    <img src="images/power_cleaning.png" alt="Patio & Outdoor Surface Washing">
-                </div>
-                <div class="svc-label">Patio &amp; Outdoor Surface Washing</div>
-            </a>
-
-            <!-- Gutter & Drainage Cleaning -->
-            <a href="#contact" class="svc-card" id="sc-gutter">
-                <div class="svc-img">
-                    <img src="images/service_gutter.png" alt="Gutter & Drainage Cleaning">
-                </div>
-                <div class="svc-label">Gutter &amp; Drainage Cleaning</div>
-            </a>
-
-            <!-- Commercial Exterior Washing -->
-            <a href="#contact" class="svc-card" id="sc-commercial">
-                <div class="svc-img">
-                    <img src="images/commercial_cleaning.png" alt="Commercial Exterior Washing">
-                </div>
-                <div class="svc-label">Commercial Exterior Washing</div>
-            </a>
-
-        </div>
-
-        <!-- wave bottom -->
-        <div class="cards-wave">
-            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,20 C360,60 720,0 1080,30 C1260,45 1380,15 1440,20 L1440,60 L0,60 Z" fill="var(--cream)"/>
-            </svg>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         BUILDERS SECTION — full-width bg
-    ============================ -->
-    <section class="builders-section">
-        <div class="builders-bg" style="background-image:url('images/about_roof.png');"></div>
-        <div class="builders-overlay"></div>
-        <div class="builders-content">
-            <h2>Professional Roof &amp; Pavement Cleaning</h2>
-            <p>At Francho Roof &amp; Pavement Cleaner, we restore your home's beauty and protect your property from the harsh tropical elements. Serving Dar es Salaam and surrounding areas, we specialize in high-quality exterior pressure washing services designed to preserve the structure and aesthetics of your building.</p>
-            <p>From cleaning roof tiles and restoring paver block driveways to removing stubborn black mold and algae from walls, we use professional grade equipment and specialized techniques to complete every job to the highest standards. Fast, professional, and affordable.</p>
-        </div>
-        <!-- wave bottom -->
-        <div class="builders-wave">
-            <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,35 C200,70 400,0 600,35 C800,70 1000,10 1200,40 C1320,58 1400,20 1440,35 L1440,70 L0,70 Z" fill="#ffffff"/>
-            </svg>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         GALLERY — masonry grid
-    ============================ -->
-    <section class="gallery-section" id="gallery">
-        <div class="gallery-header">
-            <h2>Our Work Proofs</h2>
-            <p>Real before and after results from recent pavement cleaning projects across Dar es Salaam &amp; surrounds</p>
-        </div>
-        <div class="gallery-grid">
-
-            <!-- Project 1: Driveway Cleaning -->
-            <div class="gi g-item" id="gi-1">
-                <img src="images/before_roof.png" alt="Driveway pavement before pressure washing" loading="lazy">
-                <span class="gi-before-badge">Before</span>
-                <div class="gi-caption">Driveway Cleaning (Before)</div>
-            </div>
-
-            <div class="gi g-item" id="gi-2">
-                <img src="images/after_roof.png" alt="Driveway pavement after pressure washing" loading="lazy">
-                <span class="gi-after-badge">After</span>
-                <div class="gi-caption">Driveway Cleaning (After)</div>
-            </div>
-
-            <!-- Project 2: Paver Blocks near Wall -->
-            <div class="gi g-item" id="gi-3">
-                <img src="images/before_pavement.png" alt="Paver blocks near wall before pressure washing" loading="lazy">
-                <span class="gi-before-badge">Before</span>
-                <div class="gi-caption">Paver Blocks (Before)</div>
-            </div>
-
-            <div class="gi g-item" id="gi-4">
-                <img src="images/after_pavement.png" alt="Paver blocks near wall after pressure washing" loading="lazy">
-                <span class="gi-after-badge">After</span>
-                <div class="gi-caption">Paver Blocks (After)</div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         BEFORE & AFTER — roof cleaning
-    ============================ -->
-    <section class="ba-section">
-        <div class="ba-inner">
-            <div class="ba-header">
-                <span class="ba-eyebrow">Pavement Cleaning</span>
-                <h2>The Francho Difference</h2>
-                <p>See real results from a recent pavement and driveway pressure washing job. Stains, moss, and dirt can make walkways slippery and unsightly—our professional service makes them look brand new again.</p>
-            </div>
-            <div class="ba-grid">
-                <div class="ba-card" id="ba-before">
-                    <div class="ba-img-wrap">
-                        <img src="images/before_roof.png" alt="Red block pavement dirty and covered with stains before cleaning">
-                    </div>
-                    <div class="ba-label">
-                        <span class="ba-tag">Before</span>
-                        <p>Stained, moldy paver blocks</p>
-                    </div>
-                </div>
-                <div class="ba-divider">
-                    <div class="ba-arrow">→</div>
-                </div>
-                <div class="ba-card" id="ba-after">
-                    <div class="ba-img-wrap">
-                        <img src="images/after_roof.png" alt="Red block pavement clean and spotless after pressure washing">
-                    </div>
-                    <div class="ba-label">
-                        <span class="ba-tag ba-tag-after">After</span>
-                        <p>Spotless, restored paver blocks</p>
-                    </div>
-                </div>
-            </div>
-            <div class="ba-cta">
-                <a href="https://wa.me/255662254777?text=Hi%2C+I%27d+like+a+free+quote+for+pavement+cleaning" class="ghost-btn" id="ba-cta-btn" target="_blank">
-                    Get a Free Pavement Cleaning Quote &nbsp;&rarr;
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         RISKS OF NEGLECT SECTION
-    ============================ -->
-    <section class="risks-section">
-        <div class="risks-inner">
-            <div class="risks-header">
-                <span class="risks-eyebrow">Dangers of Neglect</span>
-                <h2>Why Clean Your Roof &amp; Pavement?</h2>
-                <p>Neglecting standard maintenance can lead to severe hazards, structural decay, and expensive repairs. Protect your home and family.</p>
-            </div>
-            <div class="risks-grid">
+    <section class="tw-section tw-contact-section" id="contact">
+        <div class="tw-container">
+            <div class="tw-contact-card">
                 
-                <div class="risk-card" id="rc-roof">
-                    <div class="risk-card-header">
-                        <span class="risk-icon">⚠</span>
-                        <h3>Risks of a Dirty Roof</h3>
+                <div class="tw-contact-info">
+                    <span class="tw-section-tag tag-white"><i class="fa-solid fa-headset"></i> GET IN TOUCH</span>
+                    <h2>Thinking of Transforming <br><span class="tw-highlight-gold">Your Outdoor Space?</span></h2>
+                    <p>Get in touch with Joe Church today for advice, a free on-site survey, or a quick quote.</p>
+
+                    <div class="tw-info-list">
+                        <div class="tw-info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span>Direct Phone Call</span>
+                                <strong><a href="tel:07700900123">07700 900 123</a></strong>
+                            </div>
+                        </div>
+
+                        <div class="tw-info-item">
+                            <i class="fa-brands fa-whatsapp icon-wa"></i>
+                            <div>
+                                <span>WhatsApp Fast Chat</span>
+                                <strong><a href="https://wa.me/447700900123" target="_blank">Chat with Joe Now</a></strong>
+                            </div>
+                        </div>
+
+                        <div class="tw-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Primary Service Area</span>
+                                <strong>Clydebank, Glasgow &amp; The West of Scotland</strong>
+                            </div>
+                        </div>
+
+                        <div class="tw-info-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div>
+                                <span>Official Instagram</span>
+                                <strong><a href="https://www.instagram.com/brickscapes1" target="_blank">@brickscapes1</a></strong>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="risk-list">
-                        <li><strong>Moss &amp; Algae Damage:</strong> Moss and tropical algae trap dampness, degrading roof tiles and causing structural decay.</li>
-                        <li><strong>Leaks &amp; Water Damage:</strong> Water seeps through cracked shingles, creating interior ceilings and wall leaks.</li>
-                        <li><strong>Clogged Gutters:</strong> Loose debris drains down into gutters, resulting in overflow water damage to your fascia and walls.</li>
-                        <li><strong>Reduced Property Value:</strong> Unchecked mold and dark water stains ruin curb appeal and lower property resale value.</li>
+                </div>
+
+                <div class="tw-contact-form-box">
+                    <h3>Request a Free Quote</h3>
+                    <form id="tw-form" class="tw-form">
+                        <div class="tw-form-row">
+                            <input type="text" id="f-name" required placeholder="Full Name *">
+                            <input type="tel" id="f-phone" required placeholder="Phone Number *">
+                        </div>
+                        <div class="tw-form-row">
+                            <input type="text" id="f-postcode" required placeholder="Postcode / Location (e.g. Clydebank, Bearsden) *">
+                            <select id="f-service" required>
+                                <option value="">-- Primary Service Required --</option>
+                                <option value="Garden & Retaining Walls">Garden &amp; Retaining Walls</option>
+                                <option value="Extensions & Garages">Extensions &amp; Garages Substructure</option>
+                                <option value="Steps & Repointing">Brick Steps &amp; Repointing</option>
+                                <option value="Patios & Paving">Patios &amp; Paving (Valhalla / Porcelain)</option>
+                                <option value="Fencing & Gates">Fencing &amp; Gates</option>
+                                <option value="Artificial Grass">Artificial Grass Lawns</option>
+                            </select>
+                        </div>
+                        <textarea id="f-details" rows="4" placeholder="Describe your project details..."></textarea>
+                        <button type="submit" class="btn-tw-gold-block">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Free Quote Request
+                        </button>
+                    </form>
+                    <div class="tw-toast" id="tw-toast">
+                        <i class="fa-solid fa-circle-check"></i> Thank you! Your request has been sent to Joe Church. He will contact you shortly.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         11. 5-COLUMN DEEP FOREST GREEN FOOTER (REF SCREENSHOT 4)
+    ============================ -->
+    <footer class="tw-footer-5col-section">
+        <div class="tw-container">
+            <div class="tw-footer-5col-grid">
+                
+                <!-- Col 1: Logo & Hours -->
+                <div class="tw-footer-col">
+                    <div class="tw-logo-title" style="font-size:1.5rem; margin-bottom:12px;">BRICKSCAPES</div>
+                    <p style="font-size:0.85rem; color:rgba(255,255,255,0.7);">
+                        Monday - Friday 7:30am - 5:00pm<br>
+                        Building your dreams, brick by brick.
+                    </p>
+                    <div style="margin-top:12px; font-size:1.2rem; color:var(--tw-gold); display:flex; gap:10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="tw-footer-col">
+                    <h4>CORE SERVICES</h4>
+                    <ul>
+                        <li><a href="#brickwork">Retaining Walls</a></li>
+                        <li><a href="#brickwork">Extensions &amp; Garages</a></li>
+                        <li><a href="#patios">Valhalla Paving Patios</a></li>
+                        <li><a href="#landscapes">Fencing &amp; Gates</a></li>
+                        <li><a href="#landscapes">Artificial Grass</a></li>
                     </ul>
                 </div>
 
-                <div class="risk-card" id="rc-chimney">
-                    <div class="risk-card-header">
-                        <span class="risk-icon">⚠</span>
-                        <h3>Risks of Dirty Pavements</h3>
-                    </div>
-                    <ul class="risk-list">
-                        <li><strong>Severe Slipping Hazards:</strong> Black algae and mold growth on wet concrete/pavers make walkways extremely slick and dangerous.</li>
-                        <li><strong>Weed &amp; Moss Growth:</strong> Plant roots break through paver joints, displacing support sand and causing pavers to shift.</li>
-                        <li><strong>Concrete Degradation:</strong> Acidic mold and trapped grime slowly corrode pavement surfaces, causing pitting and cracks.</li>
-                        <li><strong>Permanent Staining:</strong> Oil spills and carbon grime bind to porous surfaces, leaving unsightly permanent marks.</li>
+                <!-- Col 3: About Us -->
+                <div class="tw-footer-col">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="#story">Clydebank Projects</a></li>
+                        <li><a href="#story">Our Experience</a></li>
+                        <li><a href="https://www.instagram.com/brickscapes1" target="_blank">Instagram (@brickscapes1)</a></li>
+                        <li><a href="#gallery">Recent Work Gallery</a></li>
                     </ul>
                 </div>
 
-            </div>
-            <div class="risks-note">
-                <strong>Don't Risk It!</strong> Call us today at <a href="tel:0662254777">0662 254 777</a> to schedule a free inspection and quote.
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         ABOUT — split layout (features arborist/technician photo instead of flyer)
-    ============================ -->
-    <section class="about-section" id="about">
-        <div class="about-img">
-            <img src="images/technician_cleaning.png" alt="Francho Roof & Pavement Cleaner technician working on roof pressure washing">
-        </div>
-        <div class="about-text">
-            <span class="about-eyebrow">Who We Are</span>
-            <h2>Protecting Your Home<br><em>From the Top Down</em></h2>
-            <p>Francho Roof &amp; Pavement Cleaner is a premier, local exterior cleaning service based in Dar es Salaam. We offer high-quality roof, pavement, wall, and gutter cleaning services to safeguard your property against mold, structural decay, and water damage.</p>
-            <p>Our dedicated team uses specialized pressure washing equipment to ensure your roofs and driveways are spotless, safe, and beautiful. Don't risk the dangers of neglecting your exterior home maintenance!</p>
-            <ul class="about-list">
-                <li>✔&nbsp; <strong>Professional &amp; Reliable</strong> for your peace of mind</li>
-                <li>✔&nbsp; <strong>Roof &amp; Gutter Cleaning</strong> to prevent leaks and water damage</li>
-                <li>✔&nbsp; <strong>Expert Pressure Washing</strong> for pavers, concrete, and walls</li>
-                <li>✔&nbsp; <strong>Free, No-Obligation Quotes</strong> with competitive rates</li>
-                <li>✔&nbsp; <strong>Serving All Dar es Salaam</strong> &amp; surrounding areas</li>
-            </ul>
-            <a href="https://wa.me/255662254777?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote." class="ghost-btn ghost-btn-light" id="about-btn" target="_blank">
-                WhatsApp for a Quote &nbsp;&rarr;
-            </a>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         TESTIMONIALS
-    ============================ -->
-    <section class="testi-section">
-        <div class="testi-inner">
-            <h2>What Our Customers Say</h2>
-            <div class="testi-grid">
-                <div class="tcard" id="tc-1">
-                    <div class="tc-stars">★★★★★</div>
-                    <blockquote>"Francho cleaned our mossy concrete roof last week. Incredible results, the tiles look brand new and they cleaned up everything afterwards. Top job!"</blockquote>
-                    <cite>— Didas Mushi, Masaki</cite>
+                <!-- Col 4: Help -->
+                <div class="tw-footer-col">
+                    <h4>HELP &amp; ADVICE</h4>
+                    <ul>
+                        <li><a href="#contact">Free Price Quote</a></li>
+                        <li><a href="#contact">Free On-Site Survey</a></li>
+                        <li><a href="#patios">Care Guides</a></li>
+                        <li><a href="#contact">Terms &amp; Conditions</a></li>
+                    </ul>
                 </div>
-                <div class="tcard" id="tc-2">
-                    <div class="tc-stars">★★★★★</div>
-                    <blockquote>"Highly recommend their wall mold cleaning service. Very clean, fast, and professional. They removed all black algae stains from our fence walls and main house."</blockquote>
-                    <cite>— Sarah K., Oysterbay</cite>
+
+                <!-- Col 5: Contact -->
+                <div class="tw-footer-col">
+                    <h4>CONTACT US</h4>
+                    <p><strong>Brickscapes Limited</strong></p>
+                    <p>Clydebank, Glasgow &amp; The West</p>
+                    <p>Email: <a href="mailto:info@brickscapes.co.uk" style="color:#cba371;">info@brickscapes.co.uk</a></p>
+                    <p>Tel: <a href="tel:07700900123" style="color:#cba371; font-weight:700;">07700 900 123</a></p>
                 </div>
-                <div class="tcard" id="tc-3">
-                    <div class="tc-stars">★★★★★</div>
-                    <blockquote>"Had my paver block driveways pressure washed by these guys. They arrived on time, worked hard, and the pavement looks amazing. Five stars!"</blockquote>
-                    <cite>— Juma Khatibu, Mbezi Beach</cite>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    <!-- ===========================
-         AREAS
-    ============================ -->
-    <section class="areas-section" id="areas">
-        <div class="areas-inner">
-            <h2>Areas We Cover</h2>
-            <p>Based in <strong>Dar es Salaam</strong> — we travel across the region to bring professional roof, wall, and pavement cleaning services right to your home.</p>
-            <div class="areas-tags">
-                <span>Masaki</span>
-                <span>Oysterbay</span>
-                <span>Mikocheni</span>
-                <span>Mbezi Beach</span>
-                <span>Kinondoni</span>
-                <span>Kigamboni</span>
-                <span>Upanga</span>
-                <span>Tegeta</span>
-                <span>Ilala</span>
-                <span>Temeke</span>
             </div>
-        </div>
-    </section>
 
-
-    <!-- ===========================
-         BOOK A SITE VISIT
-    ============================ -->
-    <section class="book-section" id="contact">
-        <div class="book-bg" style="background-image:url('images/quote-bg.jpg');"></div>
-        <div class="book-scrim"></div>
-        <div class="book-content">
-            <h2>Book a Free Quote</h2>
-            <p>Get in touch with us today for a free, no-obligation quote. Let's make sure your roof, walls, and pavements are safe and clean.</p>
-            <a href="tel:0662254777" class="book-ghost-btn" id="book-call-btn">
-                Call: 0662 254 777 &nbsp;&rarr;
-            </a>
-            <a href="https://wa.me/255662254777?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20cleaning%20services." class="book-ghost-btn" id="book-wa-btn" target="_blank">
-                WhatsApp Us &nbsp;&rarr;
-            </a>
-        </div>
-        <!-- cream wave -->
-        <div class="book-wave">
-            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1380,20 1440,40 L1440,80 L0,80 Z" fill="#f7f5ef"/>
-            </svg>
-        </div>
-    </section>
-
-
-    <!-- ===========================
-         FOOTER
-    ============================ -->
-    <footer class="site-footer" id="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="images/logo.png" alt="Francho Roof & Pavement Cleaner Logo" class="footer-logo">
-                <p class="fb-name">Francho Roof &amp; Pavement Cleaner</p>
-                <p class="fb-sub">We restore your home's beauty!</p>
-                <p class="fb-desc">Professional roof, pavement, driveway, and wall pressure washing services across Dar es Salaam &amp; surrounding areas. Work done to the highest standards — always.</p>
+            <div class="text-center" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; font-size:0.8rem; color:rgba(255,255,255,0.6);">
+                &copy; 2026 Brickscapes. All Rights Reserved. Building your dreams, brick by brick.
             </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Roof Cleaning</a></li>
-                    <li><a href="#services">Pavement Washing</a></li>
-                    <li><a href="#services">Gutter Cleaning</a></li>
-                    <li><a href="#services">Wall Mold Removal</a></li>
-                    <li><a href="#services">Patio Washing</a></li>
-                    <li><a href="#services">Commercial Cleaning</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li class="footer-contact-item">
-                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Dar es Salaam, Tanzania
-                    </li>
-                    <li class="footer-contact-item">
-                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                        <a href="tel:0662254777">0662 254 777</a>
-                    </li>
-                    <li class="footer-contact-item">
-                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        <a href="mailto:francho.exterior@gmail.com">francho.exterior@gmail.com</a>
-                    </li>
-                    <li class="footer-contact-item">
-                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        <a href="https://www.instagram.com/franchoroofpavementcleaner" target="_blank">Instagram</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Areas</h4>
-                <ul>
-                    <li>Masaki &amp; Oysterbay</li>
-                    <li>Mikocheni &amp; Mbezi Beach</li>
-                    <li>Kinondoni &amp; Kigamboni</li>
-                    <li>Tegeta &amp; Temeke</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Francho Roof &amp; Pavement Cleaner &nbsp;·&nbsp; Dar es Salaam, Tanzania</p>
         </div>
     </footer>
 
+    <!-- STICKY FLOATING BOTTOM LEFT BADGE (REF SCREENSHOT 4) -->
+    <a href="https://www.instagram.com/brickscapes1" target="_blank" class="tw-sticky-badge-left">
+        <i class="fa-brands fa-instagram"></i> VISIT OUR INSTAGRAM @BRICKSCAPES1
+    </a>
 
-    <!-- ===========================
-         MOBILE STICKY BAR
-    ============================ -->
-    <div class="sticky-bar">
-        <a href="tel:0662254777" class="sb-call">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            Call Now
-        </a>
-        <a href="https://wa.me/255662254777?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20cleaning%20services." class="sb-wa" target="_blank">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-        </a>
+    <!-- STICKY MOBILE BAR -->
+    <div class="tw-mob-bar">
+        <a href="tel:07700900123" class="tw-mob-btn mob-call"><i class="fa-solid fa-phone"></i> <span>Call Joe</span></a>
+        <a href="https://wa.me/447700900123" target="_blank" class="tw-mob-btn mob-wa"><i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span></a>
+        <a href="#contact" class="tw-mob-btn mob-calc"><i class="fa-solid fa-calendar-check"></i> <span>Free Quote</span></a>
     </div>
 
-    <!-- Scripts -->
+    <!-- Script -->
     <script src="main.js"></script>
 </body>
 </html>

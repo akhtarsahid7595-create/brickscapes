@@ -1,223 +1,187 @@
-(function () {
-    'use strict';
+/**
+ * TURFWORLD & BRICKSCAPES — Master Interactive Script
+ * Lawn Turf, Topsoil & Landscaping Supplies
+ */
 
-    // 1. Hero Subtle Zoom Animation Trigger
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        setTimeout(() => hero.classList.add('loaded'), 100);
-    }
+document.addEventListener('DOMContentLoaded', () => {
 
-    // 2. Navigation Scroll Effect
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
-            header.style.background = 'rgba(255,255,255,0.98)';
-        } else {
-            header.style.boxShadow = '';
-            header.style.background = '#fff';
-        }
-    });
-
-    // 3. Mobile Navigation Drawer Toggling
-    const hamburger = document.getElementById('hamburger');
-    const drawer = document.getElementById('mobile-drawer');
-    const overlay = document.getElementById('drawer-overlay');
-    const drawerClose = document.getElementById('drawer-close');
-    const drawerLinks = document.querySelectorAll('.drawer-link');
+    /* ==========================================================================
+       1. MOBILE NAVIGATION DRAWER
+       ========================================================================== */
+    const mobToggle = document.getElementById('tw-mob-toggle');
+    const drawer = document.getElementById('tw-drawer');
+    const drawerOverlay = document.getElementById('tw-drawer-overlay');
+    const drawerClose = document.getElementById('tw-drawer-close');
+    const drawerLinks = document.querySelectorAll('.tw-drawer-link');
 
     function openDrawer() {
-        drawer.classList.add('open');
-        overlay.classList.add('active');
-        hamburger.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent main page scrolling
+        if (drawer) drawer.classList.add('active');
+        if (drawerOverlay) drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     function closeDrawer() {
-        drawer.classList.remove('open');
-        overlay.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.style.overflow = ''; // Restore main page scrolling
+        if (drawer) drawer.classList.remove('active');
+        if (drawerOverlay) drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     }
 
-    if (hamburger) hamburger.addEventListener('click', openDrawer);
+    if (mobToggle) mobToggle.addEventListener('click', openDrawer);
     if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-    if (overlay) overlay.addEventListener('click', closeDrawer);
-    
-    drawerLinks.forEach(link => {
-        link.addEventListener('click', closeDrawer);
-    });
+    if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
-    // 4. Smooth Scrolling for Navigation Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const id = this.getAttribute('href');
-            if (id === '#') return;
-            const targetElement = document.querySelector(id);
-            if (targetElement) {
-                e.preventDefault();
-                const headerH = document.getElementById('site-header')?.offsetHeight || 88;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerH;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+    drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+    /* ==========================================================================
+       2. INTERACTIVE TURF & SOIL CALCULATOR LOGIC
+       ========================================================================== */
+    const calcLength = document.getElementById('calc-length');
+    const calcWidth = document.getElementById('calc-width');
+    const calcWaste = document.getElementById('calc-waste');
+
+    const valLength = document.getElementById('val-length');
+    const valWidth = document.getElementById('val-width');
+
+    const resArea = document.getElementById('res-area');
+    const resRolls = document.getElementById('res-rolls');
+    const resSoil = document.getElementById('res-soil');
+    const resPrice = document.getElementById('res-price');
+    const orderBtn = document.getElementById('calc-order-btn');
+
+    // Turf roll price = £6.00 / m²
+    const TURF_PRICE_PER_M2 = 6.00;
+
+    function calculateTurf() {
+        if (!calcLength || !calcWidth) return;
+
+        const length = parseInt(calcLength.value, 10);
+        const width = parseInt(calcWidth.value, 10);
+        const includeWaste = calcWaste ? calcWaste.checked : true;
+
+        if (valLength) valLength.textContent = `${length} m`;
+        if (valWidth) valWidth.textContent = `${width} m`;
+
+        let rawArea = length * width;
+        let totalRolls = rawArea;
+
+        if (includeWaste) {
+            totalRolls = Math.ceil(rawArea * 1.10); // +10% waste allowance
+        }
+
+        // Each roll = 1m²
+        const soilBags = totalRolls; // 1 25kg bag per m² for 25mm depth
+        const totalPrice = (totalRolls * TURF_PRICE_PER_M2).toFixed(2);
+
+        if (resArea) resArea.textContent = `${rawArea} m²`;
+        if (resRolls) resRolls.textContent = `${totalRolls} Rolls`;
+        if (resSoil) resSoil.textContent = `${soilBags} Bags (25kg)`;
+        if (resPrice) resPrice.textContent = `£${totalPrice}`;
+
+        if (orderBtn) {
+            const msg = encodeURIComponent(
+                `Hi Joe! I calculated my lawn order on TurfWorld:\n` +
+                `• Lawn Size: ${length}m x ${width}m (${rawArea} m²)\n` +
+                `• Turf Rolls Needed: ${totalRolls} Rolls\n` +
+                `• Topsoil Bags Needed: ${soilBags} Bags\n` +
+                `• Estimated Price: £${totalPrice}\n` +
+                `I would like to place an order / schedule delivery.`
+            );
+            orderBtn.href = `https://wa.me/447700900123?text=${msg}`;
+        }
+    }
+
+    if (calcLength) calcLength.addEventListener('input', calculateTurf);
+    if (calcWidth) calcWidth.addEventListener('input', calculateTurf);
+    if (calcWaste) calcWaste.addEventListener('change', calculateTurf);
+
+    // Initial calculation
+    calculateTurf();
+
+    /* ==========================================================================
+       3. FILTERABLE GALLERY & LIGHTBOX MODAL
+       ========================================================================== */
+    const filterBtns = document.querySelectorAll('.tw-filter-btn');
+    const galItems = document.querySelectorAll('.tw-gal-item');
+    const lightbox = document.getElementById('tw-lightbox');
+    const lbImg = document.getElementById('tw-lb-img');
+    const lbCap = document.getElementById('tw-lb-cap');
+    const lbClose = document.getElementById('tw-lb-close');
+    const lbOverlay = document.getElementById('tw-lb-overlay');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterVal = btn.getAttribute('data-filter');
+
+            galItems.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                if (filterVal === 'all' || cat === filterVal) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         });
     });
 
-    // 5. Scroll Reveal Animations (Intersection Observer)
-    const revealTargets = document.querySelectorAll(
-        '.svc-card, .tcard, .g-item, .builders-content, .about-text, .about-img, .areas-inner, .gallery-header, .ba-header, .ba-card, .risk-card, .risks-header'
-    );
-
-    const observerOptions = {
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    revealTargets.forEach((el, index) => {
-        // Initial hidden states
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${(index % 4) * 0.08}s, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${(index % 4) * 0.08}s`;
-        revealObserver.observe(el);
-    });
-
-    // 6. Gallery Lightbox Functionality
-    const galleryItems = document.querySelectorAll('.g-item');
-    
-    // Create lightbox elements dynamically
-    const lbContainer = document.createElement('div');
-    lbContainer.id = 'custom-lightbox';
-    lbContainer.innerHTML = `
-        <div class="lb-backdrop"></div>
-        <div class="lb-content-wrapper">
-            <button class="lb-close-btn" aria-label="Close Lightbox">&times;</button>
-            <img class="lb-active-img" src="" alt="">
-            <div class="lb-caption-text"></div>
-        </div>
-    `;
-    document.body.appendChild(lbContainer);
-
-    // Inject styles for lightbox
-    const lbStyle = document.createElement('style');
-    lbStyle.textContent = `
-        #custom-lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-        }
-        #custom-lightbox.open {
-            display: flex;
-        }
-        .lb-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(10, 15, 8, 0.94);
-            cursor: pointer;
-        }
-        .lb-content-wrapper {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 90vw;
-        }
-        .lb-active-img {
-            max-height: 82vh;
-            max-width: 100%;
-            object-fit: contain;
-            border-radius: 4px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-            display: block;
-            opacity: 0;
-            transform: scale(0.95);
-            transition: opacity 0.35s ease, transform 0.35s ease;
-        }
-        .lb-active-img.loaded {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .lb-close-btn {
-            position: absolute;
-            top: -48px;
-            right: 0;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 2.8rem;
-            cursor: pointer;
-            line-height: 1;
-            opacity: 0.75;
-            transition: opacity 0.2s, transform 0.2s;
-        }
-        .lb-close-btn:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-        .lb-caption-text {
-            color: rgba(255, 255, 255, 0.85);
-            font-family: var(--serif);
-            font-size: 1.1rem;
-            margin-top: 14px;
-            text-align: center;
-            letter-spacing: 0.02em;
-        }
-    `;
-    document.head.appendChild(lbStyle);
-
-    const lbBackdrop = lbContainer.querySelector('.lb-backdrop');
-    const lbCloseBtn = lbContainer.querySelector('.lb-close-btn');
-    const lbImg = lbContainer.querySelector('.lb-active-img');
-    const lbCaption = lbContainer.querySelector('.lb-caption-text');
-
-    galleryItems.forEach(item => {
+    galItems.forEach(item => {
         item.addEventListener('click', () => {
-            const originalImg = item.querySelector('img');
-            const captionContent = item.querySelector('.gi-caption')?.textContent || originalImg.alt;
-            
-            lbImg.src = originalImg.src;
-            lbImg.alt = originalImg.alt;
-            lbCaption.textContent = captionContent;
-            
-            lbContainer.classList.add('open');
-            document.body.style.overflow = 'hidden';
+            const img = item.querySelector('img');
+            const cap = item.querySelector('h4') ? item.querySelector('h4').innerText : '';
 
-            // Subtle fade/zoom transition for active image
-            setTimeout(() => {
-                lbImg.classList.add('loaded');
-            }, 50);
+            if (lightbox && lbImg && img) {
+                lbImg.src = img.src;
+                if (lbCap) lbCap.innerText = cap;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
         });
     });
 
     function closeLightbox() {
-        lbImg.classList.remove('loaded');
-        setTimeout(() => {
-            lbContainer.classList.remove('open');
+        if (lightbox) {
+            lightbox.classList.remove('active');
             document.body.style.overflow = '';
-        }, 200);
+        }
     }
 
-    lbBackdrop.addEventListener('click', closeLightbox);
-    lbCloseBtn.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeLightbox();
-    });
+    if (lbClose) lbClose.addEventListener('click', closeLightbox);
+    if (lbOverlay) lbOverlay.addEventListener('click', closeLightbox);
 
-})();
+    /* ==========================================================================
+       4. FORM SUBMISSION
+       ========================================================================== */
+    const twForm = document.getElementById('tw-form');
+    const twToast = document.getElementById('tw-toast');
+
+    if (twForm) {
+        twForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('f-name').value;
+            const phone = document.getElementById('f-phone').value;
+            const postcode = document.getElementById('f-postcode').value;
+            const service = document.getElementById('f-service').value;
+            const details = document.getElementById('f-details').value;
+
+            if (twToast) {
+                twToast.classList.add('active');
+                twForm.reset();
+                setTimeout(() => twToast.classList.remove('active'), 6000);
+            }
+
+            const waMsg = encodeURIComponent(
+                `Hi Joe! TurfWorld Quote Request:\n` +
+                `• Name: ${name}\n` +
+                `• Phone: ${phone}\n` +
+                `• Postcode: ${postcode}\n` +
+                `• Service: ${service}\n` +
+                `• Details: ${details}`
+            );
+            window.open(`https://wa.me/447700900123?text=${waMsg}`, '_blank');
+        });
+    }
+
+});

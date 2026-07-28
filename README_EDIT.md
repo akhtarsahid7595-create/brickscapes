@@ -1,30 +1,37 @@
-# How to Edit Your Website
+# How to Edit Your TurfWorld & Brickscapes Website
 
-This guide explains how you can easily update the content of your website in the future.
-
-### 1. Changing Text
-All text is located in the `index.html` file.
-- Open `index.html` in any text editor (like Notepad, VS Code, or even TextEdit).
-- Use `Ctrl + F` (or `Cmd + F`) to find the text you want to change.
-- Edit the text between the HTML tags (e.g., `<h1>Headline Here</h1>`).
-- Save the file and refresh your browser.
-
-### 2. Updating Photos
-Photos are stored in the `Assest/` and `images/` folders.
-- **To replace a photo**: Upload a new photo with the **exact same name** to the folder, replacing the old one.
-- **To add a new project**:
-    1. Upload the photo to the `Assest/` folder.
-    2. Open `index.html` and find the `<div class="gallery-grid">` section.
-    3. Copy an existing `<div class="gallery-item">` block and change the `src` attribute to your new image name.
-
-### 3. Changing Your Phone Number or WhatsApp
-Search for `255662254777` in `index.html` and replace it with your new number. Make sure to keep the country code (e.g., `255`) for the WhatsApp link.
-
-### 4. Updating Services
-Find the `<div class="services-grid">` section in `index.html`. You can edit the service titles, descriptions, and icons (using Lucide icon names).
-
-### 5. Managing the Contact Form
-The contact form currently simulates a submission for design purposes. To make it functional (send real emails), you would need to use a service like **Formspree** or a backend script. I can help you set this up if needed!
+Welcome to your redesigned website, built with **100% TurfWorld structure, typography, colors, buttons, and UI/UX** (`https://turfworld.co.uk/`).
 
 ---
-**Tip**: Always keep a backup copy of your `index.html` and `style.css` before making large changes!
+
+### 1. Changing Text & Products
+All page content is located in `index.html`.
+- Open `index.html` in any text editor.
+- Search for product titles, prices, or descriptions to edit them.
+- Save and refresh your browser.
+
+---
+
+### 2. Updating Turf Roll & Topsoil Pricing Rates
+The interactive Turf Calculator rates are configured in `main.js`:
+```javascript
+const TURF_PRICE_PER_M2 = 6.00; // Price in £ per m²
+```
+Update this number to change the live price calculation on the website.
+
+---
+
+### 3. Adding New Photos
+Photos are stored in `Assest/` and `images/`.
+To add a photo to the gallery:
+1. Save your image to `images/` or `Assest/`.
+2. Open `index.html` and locate the `<div class="tw-gallery-grid">` section.
+3. Duplicate a `<div class="tw-gal-item">` block and update the image `src` attribute.
+
+---
+
+### 4. Updating Contact & Phone Number
+Search for `07700` or `447700900123` in `index.html` and `main.js` to change the telephone or WhatsApp link.
+
+---
+*Tip: Always keep a backup of index.html and style.css before making large updates.*
