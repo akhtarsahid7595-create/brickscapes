@@ -129,10 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
     galItems.forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
-            const cap = item.querySelector('h4') ? item.querySelector('h4').innerText : '';
+            const cap = img ? img.getAttribute('alt') : '';
 
             if (lightbox && lbImg && img) {
                 lbImg.src = img.src;
+                lbImg.style.display = 'block';
                 if (lbCap) lbCap.innerText = cap;
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
@@ -143,6 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeLightbox() {
         if (lightbox) {
             lightbox.classList.remove('active');
+            if (lbImg) {
+                lbImg.style.display = 'none';
+                lbImg.src = '';
+            }
             document.body.style.overflow = '';
         }
     }
