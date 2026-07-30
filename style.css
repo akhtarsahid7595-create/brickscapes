@@ -472,20 +472,23 @@ ul { list-style: none; }
 
 .tw-brand-name {
     display: block;
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    font-size: 1.25rem;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12em;
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .tw-brand-sub {
     display: block;
-    font-size: 0.72rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
     color: #cba371;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .tw-drawer-close {
@@ -524,6 +527,7 @@ ul { list-style: none; }
 }
 
 .tw-drawer-link {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
     font-size: 0.95rem;
     font-weight: 700;
     color: #1e293b;
@@ -594,6 +598,7 @@ ul { list-style: none; }
 }
 
 .tw-drawer-btn {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
