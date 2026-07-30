@@ -2234,81 +2234,232 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     line-height: 1.35;
 }
 
-/* ===== 5. FOOTER 5-COLUMN & FLOATING BADGE (REF SCREENSHOT 4) ===== */
+/* ===== LUXURY BRANDED FOOTER SECTION ===== */
 .tw-footer-5col-section {
-    background: var(--tw-deep-forest);
+    background: linear-gradient(180deg, #0f271d 0%, #081711 100%);
     color: rgba(255,255,255,0.85);
-    padding: 80px 0 40px;
+    padding: 70px 0 35px;
     position: relative;
+    border-top: 3px solid #cba371;
 }
-.tw-footer-5col-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr;
-    gap: 28px;
-    margin-bottom: 60px;
-}
-@media (max-width: 1100px) {
-    .tw-footer-5col-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 36px 24px;
-    }
-}
-@media (max-width: 768px) {
-    .tw-footer-5col-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
+
+.tw-footer-brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .tw-footer-logo-block {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
+    gap: 14px;
 }
+
 .tw-footer-logo-img {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #cba371;
+    box-shadow: 0 4px 15px rgba(203, 163, 113, 0.3);
     flex-shrink: 0;
 }
+
 .tw-footer-logo-title {
     font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 800;
+    font-size: 1.35rem;
+    font-weight: 900;
     color: #ffffff;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    white-space: nowrap;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+    display: block;
+    text-transform: uppercase;
+}
+
+.tw-footer-logo-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.74rem;
+    color: #cba371;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-top: 2px;
+}
+
+.tw-footer-social-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tw-footer-social-pill a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    transition: all 0.25s ease;
+}
+.tw-footer-social-pill a:hover {
+    background: #cba371;
+    border-color: #cba371;
+    color: #081711;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(203, 163, 113, 0.4);
+}
+
+.tw-footer-5col-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1.1fr 1.1fr 1fr 1.2fr;
+    gap: 32px;
+    margin-bottom: 50px;
 }
 
 .tw-footer-col h4 {
     font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #cba371;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 .tw-footer-col ul {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 11px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 .tw-footer-col a {
     font-size: 0.88rem;
-    color: rgba(255,255,255,0.8);
-    transition: color 0.2s ease;
+    color: rgba(255, 255, 255, 0.78);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
 }
-.tw-footer-col a:hover { color: #cba371; }
+.tw-footer-col a i {
+    font-size: 0.72rem;
+    color: #cba371;
+    transition: transform 0.2s ease;
+}
+.tw-footer-col a:hover {
+    color: #ffffff;
+}
+.tw-footer-col a:hover i {
+    transform: translateX(3px);
+}
 
-.tw-footer-col p {
+.tw-footer-hours {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.tw-footer-payments {
+    display: flex;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    flex-wrap: wrap;
+}
+.tw-footer-payments span {
+    background: rgba(255,255,255,0.06);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tw-f-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.88rem;
-    line-height: 1.6;
     margin-bottom: 12px;
+    color: rgba(255,255,255,0.82);
+}
+.tw-f-contact-item i {
+    color: #cba371;
+    width: 18px;
+    text-align: center;
+}
+.tw-f-contact-item a {
+    color: #cba371;
+    font-weight: 700;
+}
+.tw-f-contact-item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.tw-footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tw-footer-guarantee {
+    color: #52b788;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Mobile Responsiveness for Footer */
+@media (max-width: 991px) {
+    .tw-footer-5col-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+@media (max-width: 600px) {
+    .tw-footer-brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tw-footer-5col-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .tw-footer-col {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .tw-footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
 }
 
 /* FLOATING BOTTOM LEFT BADGE (REF SCREENSHOT 4) */
