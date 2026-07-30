@@ -61,7 +61,7 @@
                 <!-- Right Contact & Cart -->
                 <div class="tw-header-right-block">
                     <a href="tel:+447884248274" class="tw-phone-number">+44 7884 248274</a>
-                    <a href="#contact" class="btn-els-primary" style="padding:10px 22px;">Get in Touch</a>
+                    <a href="contact.html" class="btn-els-primary" style="padding:10px 22px;">Get in Touch</a>
                     <a href="https://wa.me/447884248274?text=Hi%2C%20I%20would%20like%20a%20free%20quote!" target="_blank" class="tw-cart-badge-gold" title="Quick WhatsApp Quote">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
@@ -79,7 +79,7 @@
                 <a href="#services" class="tw-subnav-link">Driveways &amp; Patios</a>
                 <a href="#services" class="tw-subnav-link">Retaining Walls</a>
                 <a href="#gallery" class="tw-subnav-link">Reviews &amp; Gallery</a>
-                <a href="#contact" class="tw-subnav-link">Contact Us</a>
+                <a href="contact.html" class="tw-subnav-link">Contact Us</a>
             </nav>
         </header>
 
@@ -136,7 +136,7 @@
                         <span>Project Gallery &amp; Proofs</span>
                         <i class="fa-solid fa-chevron-right tw-drawer-arrow"></i>
                     </a>
-                    <a href="#contact" class="tw-drawer-link">
+                    <a href="contact.html" class="tw-drawer-link">
                         <span class="tw-drawer-icon"><i class="fa-solid fa-paper-plane"></i></span>
                         <span>Free Quote Contact</span>
                         <i class="fa-solid fa-chevron-right tw-drawer-arrow"></i>
@@ -653,14 +653,17 @@
 
                 <div class="tw-contact-form-box">
                     <h3>Request a Free Quote</h3>
-                    <form id="tw-form" class="tw-form">
+                    <form id="tw-form" class="tw-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="502e4e4d-cd85-40e3-929f-db8e41012b34">
+                        <input type="hidden" name="subject" value="New Lead - Brickscapes Quote Request">
+                        <input type="hidden" name="from_name" value="Brickscapes Website">
                         <div class="tw-form-row">
-                            <input type="text" id="f-name" required placeholder="Full Name *">
-                            <input type="tel" id="f-phone" required placeholder="Phone Number *">
+                            <input type="text" id="f-name" name="name" required placeholder="Full Name *">
+                            <input type="tel" id="f-phone" name="phone" required placeholder="Phone Number *">
                         </div>
                         <div class="tw-form-row">
-                            <input type="text" id="f-postcode" required placeholder="Postcode / Location (e.g. Clydebank, Bearsden) *">
-                            <select id="f-service" required>
+                            <input type="text" id="f-postcode" name="postcode" required placeholder="Postcode / Location (e.g. Clydebank, Bearsden) *">
+                            <select id="f-service" name="service" required>
                                 <option value="">-- Primary Service Required --</option>
                                 <option value="Full Garden Renovations">Full Garden Renovations</option>
                                 <option value="Bricklaying">Bricklaying</option>
@@ -670,7 +673,7 @@
                                 <option value="Artificial Grass">Artificial Grass</option>
                             </select>
                         </div>
-                        <textarea id="f-details" rows="4" placeholder="Describe your project details..."></textarea>
+                        <textarea id="f-details" name="details" rows="4" placeholder="Describe your project details..."></textarea>
                         <button type="submit" class="btn-tw-gold-block">
                             <i class="fa-solid fa-paper-plane"></i> Submit Free Quote Request
                         </button>
@@ -802,7 +805,7 @@
     <div class="tw-mob-bar">
         <a href="tel:+447884248274" class="tw-mob-btn mob-call"><i class="fa-solid fa-phone"></i> <span>Call Us</span></a>
         <a href="https://wa.me/447884248274" target="_blank" class="tw-mob-btn mob-wa"><i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span></a>
-        <a href="#contact" class="tw-mob-btn mob-calc"><i class="fa-solid fa-calendar-check"></i> <span>Free Quote</span></a>
+        <a href="contact.html" class="tw-mob-btn mob-calc"><i class="fa-solid fa-calendar-check"></i> <span>Free Quote</span></a>
     </div>
 
     <!-- Script -->

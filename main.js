@@ -177,35 +177,68 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        4. FORM SUBMISSION
        ========================================================================== */
-    const twForm = document.getElementById('tw-form');
-    const twToast = document.getElementById('tw-toast');
+    // Handle Form Submissions with Web3Forms & WhatsApp redirect
+    const forms = document.querySelectorAll('.tw-form');
 
-    if (twForm) {
-        twForm.addEventListener('submit', (e) => {
+    forms.forEach(form => {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const name = document.getElementById('f-name').value;
-            const phone = document.getElementById('f-phone').value;
-            const postcode = document.getElementById('f-postcode').value;
-            const service = document.getElementById('f-service').value;
-            const details = document.getElementById('f-details').value;
-
-            if (twToast) {
-                twToast.classList.add('active');
-                twForm.reset();
-                setTimeout(() => twToast.classList.remove('active'), 6000);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
             }
 
-            const waMsg = encodeURIComponent(
-                `Hi Joe! TurfWorld Quote Request:\n` +
-                `• Name: ${name}\n` +
-                `• Phone: ${phone}\n` +
-                `• Postcode: ${postcode}\n` +
-                `• Service: ${service}\n` +
-                `• Details: ${details}`
-            );
-            window.open(`https://wa.me/447884248274?text=${waMsg}`, '_blank');
+            const formData = new FormData(form);
+            if (!formData.has('access_key')) {
+                formData.append('access_key', '502e4e4d-cd85-40e3-929f-db8e41012b34');
+            }
+
+            const name = formData.get('name') || '';
+            const phone = formData.get('phone') || '';
+            const postcode = formData.get('postcode') || '';
+            const service = formData.get('service') || '';
+            const details = formData.get('details') || '';
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log('Web3Forms lead submitted successfully:', data);
+            })
+            .catch(err => {
+                console.error('Web3Forms lead error:', err);
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+
+                const toast = form.parentElement.querySelector('.tw-toast') || document.getElementById('tw-toast');
+                if (toast) {
+                    toast.classList.add('active');
+                    setTimeout(() => toast.classList.remove('active'), 6000);
+                }
+
+                form.reset();
+
+                // Also trigger WhatsApp lead notification
+                const waMsg = encodeURIComponent(
+                    `Hi Joe! Brickscapes New Quote Request:\n` +
+                    `• Name: ${name}\n` +
+                    `• Phone: ${phone}\n` +
+                    `• Postcode: ${postcode}\n` +
+                    `• Service: ${service}\n` +
+                    `• Details: ${details}`
+                );
+                window.open(`https://wa.me/447884248274?text=${waMsg}`, '_blank');
+            });
         });
-    }
+    });
 
 });
