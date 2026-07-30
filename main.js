@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `• Estimated Price: £${totalPrice}\n` +
                 `I would like to place an order / schedule delivery.`
             );
-            orderBtn.href = `https://wa.me/447700900123?text=${msg}`;
+            orderBtn.href = `https://wa.me/447884248274?text=${msg}`;
         }
     }
 
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `• Service: ${service}\n` +
                 `• Details: ${details}`
             );
-            window.open(`https://wa.me/447700900123?text=${waMsg}`, '_blank');
+            window.open(`https://wa.me/447884248274?text=${waMsg}`, '_blank');
         });
     }
 
