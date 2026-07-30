@@ -226,17 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 form.reset();
-
-                // Also trigger WhatsApp lead notification
-                const waMsg = encodeURIComponent(
-                    `Hi Joe! Brickscapes New Quote Request:\n` +
-                    `• Name: ${name}\n` +
-                    `• Phone: ${phone}\n` +
-                    `• Postcode: ${postcode}\n` +
-                    `• Service: ${service}\n` +
-                    `• Details: ${details}`
-                );
-                window.open(`https://wa.me/447884248274?text=${waMsg}`, '_blank');
             });
         });
     });
