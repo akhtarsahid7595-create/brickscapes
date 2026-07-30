@@ -408,71 +408,246 @@ ul { list-style: none; }
     border-radius: 2px;
 }
 
-/* MOBILE DRAWER */
+/* ===== PREMIUM MOBILE DRAWER ===== */
 .tw-drawer-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index: 1050;
     opacity: 0;
     pointer-events: none;
-    transition: var(--transition);
+    transition: opacity 0.3s ease;
 }
-.tw-drawer-overlay.active { opacity: 1; pointer-events: auto; }
+.tw-drawer-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .tw-drawer {
     position: fixed;
     top: 0;
-    right: -320px;
-    width: 320px;
+    right: -350px;
+    width: 340px;
+    max-width: 88vw;
     height: 100%;
-    background: var(--tw-surface);
+    background: #ffffff;
     z-index: 1100;
-    padding: 24px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+    border-radius: 20px 0 0 20px;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
 }
-.tw-drawer.active { right: 0; }
+.tw-drawer.active {
+    right: 0;
+}
 
 .tw-drawer-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--tw-border);
-}
-.tw-drawer-close {
-    font-size: 2rem;
-    color: var(--tw-text-muted);
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #1b3d2f 0%, #0f271d 100%);
+    color: #ffffff;
 }
 
-.tw-drawer-body {
-    padding-top: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.tw-drawer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.tw-drawer-link {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--tw-text-dark);
+.tw-brand-text {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.tw-drawer-link i { color: var(--tw-gold); width: 20px; }
+
+.tw-drawer-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #cba371;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.tw-brand-name {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+}
+
+.tw-brand-sub {
+    display: block;
+    font-size: 0.72rem;
+    color: #cba371;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.tw-drawer-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.tw-drawer-close:hover {
+    background: #cba371;
+    color: #0f271d;
+    transform: rotate(90deg);
+}
+
+.tw-drawer-body {
+    padding: 20px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tw-drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tw-drawer-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+.tw-drawer-link span:nth-child(2) {
+    flex: 1;
+    margin-left: 12px;
+}
+.tw-drawer-link:hover,
+.tw-drawer-link:active {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1d4ed8;
+    transform: translateX(-3px);
+}
+
+.tw-drawer-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #cba371;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+.tw-drawer-link:hover .tw-drawer-icon {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+.tw-drawer-arrow {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    transition: transform 0.2s ease;
+}
+.tw-drawer-link:hover .tw-drawer-arrow {
+    color: #1d4ed8;
+    transform: translateX(3px);
+}
+
+.tw-drawer-footer {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
 
 .tw-drawer-actions {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+}
+
+.tw-drawer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 50px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.tw-btn-call {
+    background: linear-gradient(135deg, #1b3d2f 0%, #0d261c 100%);
+    color: #ffffff !important;
+}
+.tw-btn-call:hover {
+    box-shadow: 0 6px 20px rgba(27, 61, 47, 0.4);
+    transform: translateY(-2px);
+}
+
+.tw-btn-wa {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff !important;
+}
+.tw-btn-wa:hover {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transform: translateY(-2px);
+}
+
+.tw-drawer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.tw-drawer-socials a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+.tw-drawer-socials a:hover {
+    background: #1b3d2f;
+    color: #cba371;
+    transform: translateY(-2px);
 }
 
 /* ===== HERO SECTION WITH INTEGRATED OVERLAY HEADER (REF: TURFWORLD.CO.UK) ===== */
