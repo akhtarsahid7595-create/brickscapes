@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        4. FORM SUBMISSION
        ========================================================================== */
-    // Handle Form Submissions with Web3Forms & WhatsApp redirect
+    // Handle Form Submissions with Web3Forms (Clean Email Submission)
     const forms = document.querySelectorAll('.tw-form');
 
     forms.forEach(form => {
