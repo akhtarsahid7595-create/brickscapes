@@ -155,6 +155,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lbClose) lbClose.addEventListener('click', closeLightbox);
     if (lbOverlay) lbOverlay.addEventListener('click', closeLightbox);
 
+    /* Review Proof Screenshot Lightbox */
+    const proofBtns = document.querySelectorAll('.tw-rev-proof-btn');
+    proofBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const proofSrc = btn.getAttribute('data-proof');
+            const reviewCard = btn.closest('.tw-review-card');
+            const reviewerName = reviewCard ? (reviewCard.querySelector('.tw-rev-name')?.innerText || 'Google Review') : 'Google Review';
+
+            if (lightbox && lbImg && proofSrc) {
+                lbImg.src = proofSrc;
+                lbImg.style.display = 'block';
+                if (lbCap) lbCap.innerText = `Verified Original Google Review Screenshot — ${reviewerName}`;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     /* ==========================================================================
        4. FORM SUBMISSION
        ========================================================================== */
