@@ -1563,15 +1563,18 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     font-size: 0.82rem;
 }
 
-/* ===== STICKY MOBILE BAR ===== */
+/* ===== STICKY MOBILE BAR (FROSTED GLASS) ===== */
 .tw-mob-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background: var(--tw-forest);
-    border-top: 1px solid var(--tw-border-dark);
+    height: 64px;
+    background: rgba(10, 36, 23, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(203, 163, 113, 0.35);
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.35);
     display: flex;
     z-index: 999;
 }
@@ -1585,15 +1588,20 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    font-size: 0.72rem;
+    gap: 3px;
+    font-size: 0.74rem;
     font-weight: 700;
-    color: #fff;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
-.tw-mob-btn i { font-size: 1.1rem; }
-.mob-call i { color: var(--tw-gold); }
-.mob-wa i { color: #25D366; }
-.mob-calc i { color: var(--tw-grass); }
+.tw-mob-btn:active {
+    transform: scale(0.94);
+}
+.tw-mob-btn i { font-size: 1.15rem; }
+.mob-call i { color: #cba371; filter: drop-shadow(0 2px 8px rgba(203, 163, 113, 0.5)); }
+.mob-wa i { color: #25D366; filter: drop-shadow(0 2px 8px rgba(37, 211, 102, 0.5)); }
+.mob-calc i { color: #52b788; filter: drop-shadow(0 2px 8px rgba(82, 183, 136, 0.5)); }
 
 /* ===== MOBILE & TABLET RESPONSIVE OVERRIDES ===== */
 /* ===== MOBILE & TABLET RESPONSIVE OVERRIDES ===== */
@@ -2236,8 +2244,8 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 
 /* ===== LUXURY BRANDED FOOTER SECTION ===== */
 .tw-footer-5col-section {
-    background: linear-gradient(180deg, #0f271d 0%, #081711 100%);
-    color: rgba(255,255,255,0.85);
+    background: linear-gradient(180deg, #0d261b 0%, #06140e 100%);
+    color: rgba(255,255,255,0.92);
     padding: 70px 0 35px;
     position: relative;
     border-top: 3px solid #cba371;
@@ -2249,7 +2257,7 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     justify-content: space-between;
     padding-bottom: 35px;
     margin-bottom: 45px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(203, 163, 113, 0.2);
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -2257,38 +2265,62 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 .tw-footer-logo-block {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
 .tw-footer-logo-img {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #cba371;
-    box-shadow: 0 4px 15px rgba(203, 163, 113, 0.3);
+    box-shadow: 0 0 20px rgba(203, 163, 113, 0.45);
     flex-shrink: 0;
+}
+
+.tw-brand-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .tw-footer-logo-title {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 900;
     color: #ffffff;
     letter-spacing: 0.12em;
     line-height: 1.1;
     display: block;
     text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.tw-brand-trust-tag {
+    background: linear-gradient(135deg, rgba(82, 183, 136, 0.25) 0%, rgba(82, 183, 136, 0.08) 100%);
+    border: 1px solid rgba(82, 183, 136, 0.4);
+    color: #52b788;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .tw-footer-logo-sub {
     font-family: var(--font-body);
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     color: #cba371;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     display: block;
-    margin-top: 2px;
+    margin-top: 4px;
+    text-transform: uppercase;
 }
 
 .tw-footer-social-pill {
@@ -2298,24 +2330,25 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 }
 
 .tw-footer-social-pill a {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, rgba(203, 163, 113, 0.2) 0%, rgba(203, 163, 113, 0.05) 100%);
+    border: 1px solid rgba(203, 163, 113, 0.35);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 .tw-footer-social-pill a:hover {
     background: #cba371;
     border-color: #cba371;
     color: #081711;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(203, 163, 113, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(203, 163, 113, 0.5);
 }
 
 .tw-footer-5col-grid {
@@ -2327,21 +2360,22 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 
 .tw-footer-col h4 {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     font-weight: 800;
     color: #cba371;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
     margin-bottom: 22px;
     display: flex;
     align-items: center;
     gap: 8px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .tw-footer-col ul {
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 12px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -2349,7 +2383,9 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 
 .tw-footer-col a {
     font-family: var(--font-body);
-    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
@@ -2365,12 +2401,14 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     color: #ffffff;
 }
 .tw-footer-col a:hover i {
-    transform: translateX(3px);
+    transform: translateX(4px);
+    color: #52b788;
 }
 
 .tw-footer-hours {
-    font-size: 0.84rem;
-    color: rgba(255,255,255,0.9);
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.95);
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -2381,28 +2419,30 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     display: flex;
     gap: 10px;
     font-size: 0.78rem;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.8);
     flex-wrap: wrap;
 }
 .tw-footer-payments span {
-    background: rgba(255,255,255,0.06);
-    padding: 4px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.07);
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.12);
+    font-weight: 600;
 }
 
 .tw-f-contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.88rem;
-    margin-bottom: 12px;
-    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    color: rgba(255,255,255,0.9);
 }
 .tw-f-contact-item i {
     color: #cba371;
-    width: 18px;
+    width: 20px;
     text-align: center;
+    font-size: 1.05rem;
 }
 .tw-f-contact-item a {
     color: #cba371;
@@ -2414,20 +2454,20 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 }
 
 .tw-footer-bottom-bar {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-top: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
     flex-wrap: wrap;
     gap: 12px;
 }
 
 .tw-footer-guarantee {
     color: #52b788;
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -2444,16 +2484,18 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     .tw-footer-brand-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 16px;
     }
     .tw-footer-5col-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 20px;
     }
     .tw-footer-col {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 20px;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        padding: 24px;
+        border-radius: 18px;
+        border: 1px solid rgba(203, 163, 113, 0.22);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
     .tw-footer-bottom-bar {
         flex-direction: column;
