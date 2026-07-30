@@ -1401,13 +1401,31 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     background: var(--tw-surface);
     border: 1px solid var(--tw-border);
     border-radius: var(--radius-lg);
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     box-shadow: var(--shadow-card);
 }
+
+.tw-contact-form-box {
+    order: 1;
+}
+
+.tw-contact-info {
+    order: 2;
+}
+
 @media (min-width: 992px) {
-    .tw-contact-card { grid-template-columns: 1fr 1.3fr; }
+    .tw-contact-card {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+    }
+    .tw-contact-info {
+        order: 1;
+    }
+    .tw-contact-form-box {
+        order: 2;
+    }
 }
 
 .tw-contact-info {
@@ -1713,7 +1731,14 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 
     /* Contact Card Mobile Collapse */
     .tw-contact-card {
-        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .tw-contact-form-box {
+        order: -1 !important;
+    }
+    .tw-contact-info {
+        order: 2 !important;
     }
 
     /* ELS Feature Sections Mobile Collapse */
