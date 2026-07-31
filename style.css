@@ -853,6 +853,70 @@ ul { list-style: none; }
     color: #cba371;
 }
 
+/* ===== SERVICES NAVIGATION DROPDOWN ===== */
+.tw-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.tw-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tw-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #0d261b;
+    border: 1px solid rgba(203, 163, 113, 0.35);
+    border-radius: 12px;
+    padding: 10px 0;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+.tw-dropdown:hover .tw-dropdown-menu,
+.tw-dropdown:focus-within .tw-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(4px);
+}
+
+.tw-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-heading);
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.2s ease;
+}
+
+.tw-dropdown-menu a i {
+    color: #cba371;
+    font-size: 0.9rem;
+    width: 18px;
+    text-align: center;
+}
+
+.tw-dropdown-menu a:hover {
+    background: rgba(203, 163, 113, 0.15);
+    color: #cba371;
+    padding-left: 24px;
+}
+
 /* HERO MAIN CENTERED CONTENT */
 .tw-hero-main-content {
     position: relative;
