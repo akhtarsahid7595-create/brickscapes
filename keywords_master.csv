@@ -1,0 +1,64 @@
+Category,Keyword,Volume,KD%,CPC (USD),Intent,Priority,Notes
+BRICKLAYING,"bricklayers glasgow",140,n/a,0.97,Commercial,HIGH,seo2.csv - core service
+BRICKLAYING,"bricklayers wanted glasgow",10,n/a,0,Transactional,LOW,job listing intent
+BRICKLAYING,"bricklayers required glasgow",10,n/a,0,Mixed,LOW,job listing intent
+BRICKLAYING,"bricklaying cost Glasgow",n/a,n/a,n/a,Informational,RESEARCH,"No SEMrush data - use Google KP"
+BRICKLAYING,"bricklaying services glasgow",n/a,n/a,n/a,Commercial,RESEARCH,"No SEMrush data - use Google KP"
+BRICKLAYING,"bricklayer glasgow",n/a,n/a,n/a,Commercial,RESEARCH,"No SEMrush data - try Ahrefs"
+BUILDERS GLASGOW,"builders glasgow",720,21,2.77,Commercial,HIGH,seo1.csv - high volume
+BUILDERS GLASGOW,"builders in glasgow",320,20,2.77,Commercial,HIGH,seo1.csv
+BUILDERS GLASGOW,"builder glasgow",260,21,2.80,Commercial,HIGH,seo1.csv
+BUILDERS GLASGOW,"glasgow builders",170,16,2.77,Commercial,HIGH,seo1.csv - low KD
+BUILDERS GLASGOW,"building contractors in glasgow",260,11,2.77,Commercial,HIGH,seo1.csv - very low KD
+BUILDERS GLASGOW,"glasgow building companies",210,11,2.77,Commercial,HIGH,seo1.csv - very low KD
+BUILDERS GLASGOW,"building companies in glasgow",170,14,2.80,Commercial,MEDIUM,seo1.csv
+BUILDERS GLASGOW,"construction companies in glasgow scotland",320,25,2.09,Commercial,MEDIUM,seo1.csv
+BUILDERS GLASGOW,"construction firms glasgow",170,26,2.47,Commercial,MEDIUM,seo1.csv
+BUILDERS GLASGOW,"glasgow building contractors",n/a,n/a,n/a,Commercial,RESEARCH,screenshot visible
+GROUNDWORKS,"groundworks glasgow",110,12,2.61,Commercial,HIGH,seo1.csv - low KD
+DRIVEWAYS,"driveways glasgow",480,16,2.17,Commercial,HIGH,seo1.csv - high volume
+DRIVEWAYS,"driveway glasgow",170,13,2.45,Commercial,HIGH,seo1.csv
+DRIVEWAYS,"resin driveways glasgow",390,7,1.34,Commercial,HIGH,seo1.csv - very low KD!
+DRIVEWAYS,"resin driveway glasgow",170,12,1.26,Commercial,HIGH,seo1.csv - very low KD!
+DRIVEWAYS,"monoblock driveway glasgow",210,5,2.74,Commercial,HIGH,seo1.csv - KD only 5!
+DRIVEWAYS,"driveway paving glasgow",110,28,2.66,Commercial,MEDIUM,seo1.csv
+DRIVEWAYS,"paving glasgow",110,13,0.48,Commercial,HIGH,seo1.csv
+PATIOS,"patios glasgow",170,7,2.50,Commercial,HIGH,seo1.csv - very low KD!
+LANDSCAPING,"landscaping glasgow",390,45,2.46,Commercial,MEDIUM,seo1.csv - higher KD
+LANDSCAPING,"landscape gardeners glasgow",320,28,1.57,Commercial,MEDIUM,seo1.csv
+LANDSCAPING,"landscapers glasgow",210,40,2.46,Commercial,MEDIUM,seo1.csv
+LANDSCAPING,"landscape gardeners near me",14800,36,2.62,Transactional,HIGH,"national - high volume"
+LANDSCAPING,"garden landscaping near me",1600,26,2.62,Transactional,HIGH,seo1.csv
+LANDSCAPING,"garden landscape near me",n/a,n/a,n/a,Transactional,RESEARCH,check Google KP
+FENCING,"fencing glasgow",390,16,1.52,Commercial,HIGH,seo1.csv - good volume low KD
+FENCING,"glasgow fencing",170,21,1.79,Commercial,HIGH,seo1.csv
+FENCING,"garden fencing glasgow",170,8,0,Commercial,HIGH,seo1.csv - KD only 8!
+FENCING,"fence panels glasgow",210,13,0.57,Commercial,HIGH,seo1.csv
+FENCING,"composite fencing glasgow",140,9,1.40,Commercial,HIGH,seo1.csv - low KD
+FENCING,"fencing suppliers glasgow",90,17,0.90,Commercial,MEDIUM,seo1.csv
+FENCING,"fencing supplies glasgow",170,16,0.90,Commercial,MEDIUM,seo1.csv
+FENCING,"fencing falkirk",110,8,1.72,Commercial,HIGH,seo1.csv - nearby area
+ARTIFICIAL GRASS,"artificial grass glasgow",880,8,1.01,Commercial,HIGH,seo1.csv - KD only 8! Best opportunity
+ARTIFICIAL GRASS,"synthetic grass glasgow",260,9,1.01,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial lawn glasgow",170,13,1.01,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial turf glasgow",170,9,1.01,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial grass installation glasgow",140,18,1.60,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial grass east kilbride",480,5,0.93,Commercial,HIGH,seo1.csv - KD only 5!
+ARTIFICIAL GRASS,"artificial grass motherwell",260,8,0,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial grass scotland",390,28,1.09,Commercial,MEDIUM,seo1.csv
+ARTIFICIAL GRASS,"artificial grass edinburgh",480,12,1.25,Commercial,HIGH,seo1.csv
+ARTIFICIAL GRASS,"artificial grass cleaning glasgow",210,4,0,Commercial,HIGH,seo1.csv - KD only 4!
+ARTIFICIAL GRASS,"grass direct glasgow",90,25,0.65,Navigational,LOW,competitor brand
+DECKING,"decking glasgow",170,10,1.36,Commercial,HIGH,seo1.csv - low KD
+DECKING,"composite decking glasgow",590,9,2.22,Commercial,HIGH,seo1.csv - high vol low KD!
+DECKING,"decking edinburgh",210,9,2.29,Commercial,HIGH,seo1.csv
+HOUSE EXTENSIONS,"house extensions glasgow",170,7,2.85,Commercial,HIGH,seo1.csv - KD only 7!
+HOUSE EXTENSIONS,"home extensions glasgow",140,9,3.20,Commercial,HIGH,seo1.csv
+HOUSE EXTENSIONS,"garage conversions glasgow",210,5,2.89,Commercial,HIGH,seo1.csv - KD only 5!
+HOUSE EXTENSIONS,"garage conversion glasgow",260,7,2.89,Commercial,HIGH,seo1.csv
+HOUSE EXTENSIONS,"loft conversion glasgow",260,6,1.49,Commercial,HIGH,seo1.csv - KD only 6!
+HOUSE EXTENSIONS,"home extensions scotland",260,12,2.05,Commercial,HIGH,seo1.csv
+HOUSE EXTENSIONS,"house extensions near me",720,17,5.27,Transactional,HIGH,seo1.csv - national
+ROUGHCASTING,"roughcasting glasgow",140,5,3.64,Commercial,HIGH,seo1.csv - KD only 5!
+ROOFING,"glasgow roofing",260,30,4.91,Commercial,MEDIUM,seo1.csv - higher KD
+ROOFING,"glasgow roofers",320,33,4.91,Commercial,MEDIUM,seo1.csv - higher KD
