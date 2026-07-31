@@ -14,7 +14,7 @@
 
     <!-- Main Index Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/index.html</loc>
+        <loc>https://brickscapeslandscaping.com/index</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -22,7 +22,7 @@
 
     <!-- Dedicated Bricklaying & Retaining Walls Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/bricklaying-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/bricklaying-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -30,7 +30,7 @@
 
     <!-- Dedicated Driveways & Patios Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/driveways-patios-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/driveways-patios-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -38,7 +38,7 @@
 
     <!-- Dedicated Clydebank Service Area Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/clydebank-landscaping.html</loc>
+        <loc>https://brickscapeslandscaping.com/clydebank-landscaping</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -46,7 +46,7 @@
 
     <!-- Contact & Quote Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/contact.html</loc>
+        <loc>https://brickscapeslandscaping.com/contact</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
@@ -54,7 +54,7 @@
 
     <!-- Artificial Grass Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/artificial-grass-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/artificial-grass-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -62,7 +62,7 @@
 
     <!-- Repointing Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/repointing-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/repointing-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -70,7 +70,7 @@
 
     <!-- Fencing Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/fencing-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/fencing-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -78,7 +78,7 @@
 
     <!-- Retaining Walls Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/retaining-walls-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/retaining-walls-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -86,7 +86,7 @@
 
     <!-- Garden Walls Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/garden-walls-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/garden-walls-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -94,7 +94,7 @@
 
     <!-- Decking Glasgow Page (composite decking glasgow: 590 vol, KD=9) -->
     <url>
-        <loc>https://brickscapeslandscaping.com/decking-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/decking-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -102,7 +102,7 @@
 
     <!-- Roughcasting Glasgow Page (roughcasting glasgow: 140 vol, KD=5) -->
     <url>
-        <loc>https://brickscapeslandscaping.com/roughcasting-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/roughcasting-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
@@ -110,7 +110,7 @@
 
     <!-- House Extensions Glasgow Page (garage conversions glasgow: 210 vol KD=5, loft conversion: 260 vol KD=6) -->
     <url>
-        <loc>https://brickscapeslandscaping.com/house-extensions-glasgow.html</loc>
+        <loc>https://brickscapeslandscaping.com/house-extensions-glasgow</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
