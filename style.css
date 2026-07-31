@@ -64,6 +64,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
 }
 
 body.turfworld-theme {
@@ -73,6 +76,19 @@ body.turfworld-theme {
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     padding-bottom: 60px;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative;
+}
+
+main, section, header, footer, div {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, .hero-heading-title, .wp-article-title, .wp-sidebar-title {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
 }
 
 @media (min-width: 992px) {
@@ -1841,9 +1857,15 @@ img:not([src]), img[src=""], img[src="about:blank"] {
         text-align: center !important;
     }
     .els-dark-banner-logo {
-        width: 110px !important;
-        height: 110px !important;
-        border-width: 3px !important;
+        width: 140px !important;
+        height: 140px !important;
+        min-width: 140px !important;
+        min-height: 140px !important;
+        max-width: 140px !important;
+        max-height: 140px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        border: 3.5px solid #cba371 !important;
     }
     .els-dark-banner-title,
     .els-light-banner-title {
@@ -2684,10 +2706,24 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     }
 }
 
-.wp-service-main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.wp-agency-service-layout,
+.wp-service-main-content,
+.wp-article-block,
+.wp-article-title,
+.wp-article-p,
+.wp-process-grid,
+.wp-process-card,
+.wp-spec-table-wrap,
+.wp-faq-accordion,
+.wp-faq-item,
+.wp-faq-summary,
+.wp-faq-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
 }
 
 .wp-article-block {
@@ -2696,6 +2732,320 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    overflow: hidden !important;
+}
+
+/* UNIVERSAL COMPACT IMAGE CONSTRAINTS ACROSS ALL PAGES */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.wp-article-block img,
+.wp-service-img,
+.els-article-img-box img {
+    width: 100% !important;
+    height: 340px !important;
+    max-height: 340px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 14px !important;
+}
+
+.wp-article-img-box {
+    margin: 24px 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 3px solid #cba371 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    max-height: 340px !important;
+    height: 340px !important;
+}
+
+.els-curved-img-box {
+    border-radius: 36px 0 36px 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+    border: 3px solid #ffffff !important;
+    max-height: 340px !important;
+    height: 340px !important;
+}
+.els-curved-img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 340px !important;
+    object-fit: cover !important;
+}
+
+.els-dark-feature-grid img:not(.els-dark-banner-logo) {
+    max-height: 340px !important;
+    height: 340px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+}
+
+.els-dark-banner-logo {
+    width: 240px !important;
+    height: 240px !important;
+    min-width: 240px !important;
+    min-height: 240px !important;
+    max-width: 240px !important;
+    max-height: 240px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    background: #0a2417 !important;
+    border: 4px solid #cba371 !important;
+    margin: 0 auto !important;
+    box-shadow: 0 0 35px rgba(203, 163, 113, 0.4) !important;
+    display: block !important;
+}
+
+.tw-split-exp-image {
+    max-height: 340px !important;
+    height: 340px !important;
+    width: 100% !important;
+}
+.tw-split-exp-image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 340px !important;
+    object-fit: cover !important;
+}
+
+.tw-gal-item {
+    height: 230px !important;
+    max-height: 240px !important;
+}
+.tw-gal-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.els-service-tile {
+    height: 230px !important;
+    max-height: 240px !important;
+}
+.els-service-tile img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* ==========================================================================
+   STRICT MOBILE OPTIMIZATION OVERRIDES (< 768px & < 480px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow on containers */
+    .tw-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Header top row layout */
+    .tw-header-top-row {
+        padding: 10px 14px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    .tw-social-circles {
+        display: none !important;
+    }
+
+    .tw-center-logo-block {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .tw-logo-link {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .tw-logo-title {
+        font-size: 0.95rem !important;
+        letter-spacing: 0.04em !important;
+        white-space: nowrap !important;
+    }
+
+    .tw-header-logo-img {
+        width: 32px !important;
+        height: 32px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .tw-phone-number,
+    .tw-header-right-block .btn-els-primary {
+        display: none !important;
+    }
+
+    .tw-header-right-block {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .tw-mob-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+        width: 38px !important;
+        height: 36px !important;
+        padding: 6px !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .hero-heading-title {
+        font-size: clamp(1.4rem, 6.5vw, 2.1rem) !important;
+        line-height: 1.25 !important;
+        padding: 0 4px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .hero-heading-subtitle {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        padding: 0 4px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .btn-els-pill-primary,
+    .btn-els-pill-outline {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        padding: 13px 18px !important;
+        font-size: 0.92rem !important;
+    }
+
+    .wp-agency-service-layout {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .wp-article-block {
+        padding: 20px 14px !important;
+        border-radius: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .wp-article-title {
+        font-size: 1.3rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    .wp-article-p {
+        font-size: 0.9rem !important;
+        line-height: 1.65 !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    .wp-tag-pill-group {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .wp-tag-pill {
+        font-size: 0.78rem !important;
+        padding: 6px 12px !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+    }
+
+    .wp-spec-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        display: block !important;
+        margin: 16px 0 !important;
+    }
+
+    .wp-spec-table {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .wp-spec-table th,
+    .wp-spec-table td {
+        padding: 10px 8px !important;
+        font-size: 0.82rem !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    .wp-article-img-box,
+    .wp-article-block img,
+    .els-curved-img-box,
+    .els-dark-feature-grid img {
+        height: 210px !important;
+        max-height: 220px !important;
+        border-radius: 12px !important;
+    }
+
+    .wp-process-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .wp-process-card {
+        padding: 18px 14px !important;
+    }
+
+    .wp-process-num {
+        font-size: 1.8rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .wp-agency-sidebar {
+        position: static !important;
+        width: 100% !important;
+    }
+
+    .wp-sidebar-card {
+        padding: 24px 18px !important;
+        border-radius: 16px !important;
+    }
+
+    .wp-sidebar-title {
+        font-size: 1.3rem !important;
+    }
+
+    .wp-faq-summary {
+        font-size: 0.98rem !important;
+        padding: 16px 18px !important;
+    }
+
+    .wp-faq-content {
+        padding: 0 18px 16px 18px !important;
+        font-size: 0.88rem !important;
+    }
 }
 
 .wp-article-title {
@@ -3343,3 +3693,244 @@ img:not([src]), img[src=""], img[src="about:blank"] {
         padding: 8px 12px;
     }
 }
+
+/* ==========================================================================
+   ULTRA-RESPONSIVE MOBILE & SPEED OPTIMIZATION SUITE (ALL SERVICE PAGES)
+   ========================================================================== */
+
+/* 1. Global Viewport & Performance Protection */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.turfworld-theme {
+    padding-bottom: 75px !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hardware accelerated sticky elements for 60fps scrolling */
+.tw-mob-bar, 
+.tw-floating-google-badge, 
+.tw-hero-header {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* 2. Header & Mobile Navigation */
+@media (max-width: 991px) {
+    .tw-header-top-row {
+        padding: 10px 14px !important;
+        gap: 10px !important;
+    }
+    
+    .tw-social-circles {
+        display: none !important;
+    }
+    
+    .tw-logo-title {
+        font-size: 1.15rem !important;
+        letter-spacing: 0.03em !important;
+    }
+    
+    .tw-phone-number {
+        font-size: 0.85rem !important;
+    }
+    
+    .tw-center-subnav {
+        display: none !important; /* Managed by mobile drawer / toggle */
+    }
+
+    .tw-header-right-block .btn-els-primary {
+        padding: 8px 14px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* 3. Hero Sections & Headings Responsiveness */
+@media (max-width: 768px) {
+    .tw-hero-header + main section:first-of-type,
+    section[style*="padding: 60px 0"],
+    section[style*="padding: 70px 0"] {
+        padding: 35px 14px 30px !important;
+    }
+
+    h1.hero-heading-title, 
+    .hero-heading-title {
+        font-size: clamp(1.65rem, 6.8vw, 2.3rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+        word-break: break-word !important;
+    }
+
+    p.hero-heading-subtitle, 
+    .hero-heading-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .tw-section-tag {
+        font-size: 0.72rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Stack Hero Call-to-Actions vertically on mobile */
+    div[style*="display:flex"][style*="justify-content:center"][style*="gap:16px"],
+    div[style*="display: flex"][style*="justify-content: center"][style*="gap: 16px"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 18px auto 0 !important;
+    }
+
+    .btn-els-pill-primary, 
+    .btn-els-pill-outline {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 12px 16px !important;
+        font-size: 0.9rem !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* 4. Service Grids & Layout Collapse */
+@media (max-width: 991px) {
+    /* Collapse any inline desktop multi-column grids */
+    .els-dark-feature-grid,
+    div[style*="grid-template-columns: 1fr 1fr"],
+    div[style*="grid-template-columns: 0.8fr 1.2fr"],
+    div[style*="grid-template-columns:1fr 1fr"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    .tw-section {
+        padding: 45px 0 !important;
+    }
+
+    .tw-section-head {
+        margin-bottom: 30px !important;
+    }
+
+    .tw-section-head h2 {
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem) !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* 5. Contact Cards & Form Mobile Fixes */
+@media (max-width: 768px) {
+    .tw-contact-card {
+        grid-template-columns: 1fr !important;
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+        gap: 24px !important;
+    }
+
+    .tw-contact-form-box {
+        padding: 18px 14px !important;
+    }
+
+    .tw-form-row,
+    div.tw-form-row {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+        display: flex !important;
+        gap: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .tw-form input,
+    .tw-form select,
+    .tw-form textarea {
+        width: 100% !important;
+        font-size: 0.92rem !important;
+        padding: 12px 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .btn-tw-gold-block {
+        width: 100% !important;
+        padding: 14px 18px !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+/* 6. Footer Mobile Layout */
+@media (max-width: 768px) {
+    .tw-footer-4col-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .tw-footer-brand-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .tw-footer-bottom-bar {
+        flex-direction: column !important;
+        gap: 8px !important;
+        text-align: center !important;
+    }
+}
+
+/* 7. Mobile Bottom Sticky Navigation Bar */
+.tw-mob-bar {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 62px !important;
+    background: #091a13 !important;
+    border-top: 2px solid #cba371 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    z-index: 99999 !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
+    padding: 0 4px !important;
+}
+
+.tw-mob-btn {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    padding: 6px 0 !important;
+}
+
+.tw-mob-btn i {
+    font-size: 1.15rem !important;
+    color: #cba371 !important;
+}
+
+.tw-mob-btn.mob-call i { color: #34d399 !important; }
+.tw-mob-btn.mob-wa i { color: #25d366 !important; }
+.tw-mob-btn.mob-calc i { color: #fbbf24 !important; }
+
