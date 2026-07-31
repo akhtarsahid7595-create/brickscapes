@@ -92,4 +92,28 @@
         <priority>0.90</priority>
     </url>
 
+    <!-- Decking Glasgow Page (composite decking glasgow: 590 vol, KD=9) -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/decking-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Roughcasting Glasgow Page (roughcasting glasgow: 140 vol, KD=5) -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/roughcasting-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- House Extensions Glasgow Page (garage conversions glasgow: 210 vol KD=5, loft conversion: 260 vol KD=6) -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/house-extensions-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
 </urlset>
