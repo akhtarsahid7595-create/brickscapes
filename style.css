@@ -2668,6 +2668,301 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   WORDPRESS TRADE AGENCY SERVICE PAGE DESIGN SYSTEM (NO ICONS, HIGH TYPOGRAPHY)
+   ========================================================================== */
+
+.wp-agency-service-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+}
+@media (min-width: 992px) {
+    .wp-agency-service-layout {
+        grid-template-columns: 1.8fr 1fr;
+    }
+}
+
+.wp-service-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.wp-article-block {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.wp-article-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f271d;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.wp-article-p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.02rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.wp-tag-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.wp-tag-pill {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #0f271d;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 3px solid #cba371;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.wp-process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+@media (min-width: 600px) {
+    .wp-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.wp-process-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 28px;
+    position: relative;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.wp-process-card:hover {
+    border-color: #cba371;
+    transform: translateY(-3px);
+}
+
+.wp-process-num {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #cba371;
+    line-height: 1;
+    margin-bottom: 14px;
+    display: block;
+    letter-spacing: -0.02em;
+}
+
+.wp-process-card h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f271d;
+    margin-bottom: 10px;
+}
+
+.wp-process-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.wp-spec-table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.wp-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: left;
+}
+
+.wp-spec-table th {
+    background: #0f271d;
+    color: #ffffff;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.wp-spec-table td {
+    padding: 14px 20px;
+    font-size: 0.92rem;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.wp-spec-table tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+.wp-faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wp-faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.wp-faq-item[open] {
+    border-color: #cba371;
+}
+
+.wp-faq-summary {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f271d;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wp-faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.wp-faq-summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #cba371;
+    line-height: 1;
+}
+
+.wp-faq-item[open] .wp-faq-summary::after {
+    content: '−';
+}
+
+.wp-faq-content {
+    padding: 0 24px 20px 24px;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.75;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 4px;
+    padding-top: 16px;
+}
+
+.wp-agency-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wp-sidebar-card {
+    background: #0f271d;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    border: 2px solid #cba371;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.wp-sidebar-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 800;
+    color: #cba371;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.wp-sidebar-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.wp-sidebar-desc {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.wp-sidebar-call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #cba371;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 16px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(203, 163, 113, 0.5);
+    transition: all 0.25s ease;
+    margin-bottom: 12px;
+}
+.wp-sidebar-call-btn:hover {
+    background: #b58c54;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.wp-sidebar-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.25s ease;
+}
+.wp-sidebar-wa-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+}
+
 .btn-els-pill-outline {
     display: inline-flex;
     align-items: center;
