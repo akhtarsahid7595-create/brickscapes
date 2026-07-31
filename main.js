@@ -1,3 +1,20 @@
+// Instant Clean URL (removes .html and index.html from browser address bar on all hostings)
+(function() {
+    try {
+        var path = window.location.pathname;
+        if (path.endsWith('.html')) {
+            var cleanPath = path.slice(0, -5);
+            if (cleanPath.endsWith('/index') || cleanPath === 'index') {
+                cleanPath = '/';
+            }
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        } else if (path.endsWith('/index') || path.endsWith('/index.html')) {
+            var cleanPath = '/';
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        }
+    } catch(e) {}
+})();
+
 /**
  * TURFWORLD & BRICKSCAPES — Master Interactive Script
  * Lawn Turf, Topsoil & Landscaping Supplies

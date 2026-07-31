@@ -1,7 +1,11 @@
 Options +FollowSymLinks -MultiViews
 RewriteEngine On
 
-# Redirect .html to clean URL (310 Permanent Redirect)
+# Redirect /index.html or /index to root /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /index(.html)? HTTP/
+RewriteRule ^index(.html)?$ https://brickscapeslandscaping.com/ [R=301,L]
+
+# Redirect xxx.html to clean URL /xxx
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /([^/]+).html HTTP/
 RewriteRule ^([^/]+).html$ https://brickscapeslandscaping.com/$1 [R=301,L]
 
