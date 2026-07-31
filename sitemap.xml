@@ -52,4 +52,44 @@
         <priority>0.85</priority>
     </url>
 
+    <!-- Artificial Grass Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/artificial-grass-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Repointing Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/repointing-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Fencing Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/fencing-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Retaining Walls Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/retaining-walls-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Garden Walls Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/garden-walls-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
 </urlset>

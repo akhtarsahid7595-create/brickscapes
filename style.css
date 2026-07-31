@@ -2580,31 +2580,13 @@ img:not([src]), img[src=""], img[src="about:blank"] {
 }
 
 /* FLOATING BOTTOM LEFT BADGE (REF SCREENSHOT 4) */
-.tw-sticky-badge-left {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 998;
-    background: #cba371;
-    color: #ffffff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 12px 24px;
-    text-transform: uppercase;
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.2s ease;
-}
+.tw-sticky-badge-left { display: none !important; }
 .tw-sticky-badge-left:hover {
     background: #b58c54;
     color: #ffffff;
 }
 @media (max-width: 768px) {
-    .tw-sticky-badge-left { display: none; }
+    .tw-sticky-badge-left { display: none !important; }
 }
 
 /* ==========================================================================
