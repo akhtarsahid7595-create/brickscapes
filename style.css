@@ -5,6 +5,19 @@
    Typography: Montserrat (Headings) & Open Sans (Body)
    ========================================================================== */
 
+/* Accessibility Utility Class for Screen Readers */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 /* ===== DESIGN TOKENS ===== */
 :root {
     --tw-forest: #1b4332;       /* Primary Deep Green */
@@ -2342,192 +2355,154 @@ img:not([src]), img[src=""], img[src="about:blank"] {
     line-height: 1.35;
 }
 
-/* ===== LUXURY BRANDED FOOTER SECTION ===== */
+/* ===== CLEAN BRANDED FOOTER SECTION (REF GLASGOW PAVING CO) ===== */
 .tw-footer-5col-section {
-    background: linear-gradient(180deg, #0d261b 0%, #06140e 100%);
-    color: rgba(255,255,255,0.92);
-    padding: 70px 0 35px;
+    background: #081711;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 60px 0 30px;
     position: relative;
-    border-top: 3px solid #cba371;
+    border-top: 1px solid rgba(203, 163, 113, 0.3);
 }
 
 .tw-footer-brand-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 35px;
-    margin-bottom: 45px;
-    border-bottom: 1px solid rgba(203, 163, 113, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 
 .tw-footer-logo-block {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .tw-footer-logo-img {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #cba371;
-    box-shadow: 0 0 20px rgba(203, 163, 113, 0.45);
     flex-shrink: 0;
 }
 
-.tw-brand-title-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
 .tw-footer-logo-title {
-    font-family: var(--font-heading);
-    font-size: 1.45rem;
-    font-weight: 900;
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
     color: #ffffff;
     letter-spacing: 0.12em;
     line-height: 1.1;
     display: block;
     text-transform: uppercase;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.tw-brand-trust-tag {
-    background: linear-gradient(135deg, rgba(82, 183, 136, 0.25) 0%, rgba(82, 183, 136, 0.08) 100%);
-    border: 1px solid rgba(82, 183, 136, 0.4);
-    color: #52b788;
-    font-size: 0.68rem;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .tw-footer-logo-sub {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.74rem;
     color: #cba371;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
     text-transform: uppercase;
 }
 
-.tw-footer-social-pill {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.tw-footer-social-pill a {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(203, 163, 113, 0.2) 0%, rgba(203, 163, 113, 0.05) 100%);
-    border: 1px solid rgba(203, 163, 113, 0.35);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-}
-.tw-footer-social-pill a:hover {
-    background: #cba371;
-    border-color: #cba371;
-    color: #081711;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(203, 163, 113, 0.5);
-}
-
-.tw-footer-5col-grid {
+.tw-footer-4col-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1.1fr 1.1fr 1fr 1.2fr;
-    gap: 32px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 45px;
 }
 
 .tw-footer-col h4 {
-    font-family: var(--font-heading);
-    font-size: 1.02rem;
-    font-weight: 800;
-    color: #cba371;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    margin-bottom: 18px;
+    text-transform: none;
 }
 
 .tw-footer-col ul {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .tw-footer-col a {
-    font-family: var(--font-body);
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.88);
-    transition: all 0.2s ease;
-    display: inline-flex;
+    color: rgba(255, 255, 255, 0.78);
+    transition: color 0.2s ease;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.tw-footer-col a:hover {
+    color: #cba371;
+}
+
+.tw-footer-social-circles {
+    display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+}
+
+.tw-footer-social-circles a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #081711;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
     text-decoration: none;
 }
-.tw-footer-col a i {
-    font-size: 0.72rem;
-    color: #cba371;
-    transition: transform 0.2s ease;
-}
-.tw-footer-col a:hover {
+
+.tw-footer-social-circles a:hover {
+    background: #cba371;
     color: #ffffff;
-}
-.tw-footer-col a:hover i {
-    transform: translateX(4px);
-    color: #52b788;
+    transform: translateY(-2px);
 }
 
-.tw-footer-hours {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.95);
-    font-weight: 500;
+.tw-footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 24px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 14px;
+    justify-content: space-between;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
-.tw-footer-payments {
-    display: flex;
-    gap: 10px;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.8);
-    flex-wrap: wrap;
+@media (max-width: 992px) {
+    .tw-footer-4col-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 }
-.tw-footer-payments span {
-    background: rgba(255,255,255,0.07);
-    padding: 5px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.12);
-    font-weight: 600;
+
+@media (max-width: 576px) {
+    .tw-footer-4col-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
 }
 
 .tw-f-contact-item {
