@@ -17,6 +17,30 @@
         <loc>https://brickscapeslandscaping.com/index.html</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Dedicated Bricklaying & Retaining Walls Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/bricklaying-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Dedicated Driveways & Patios Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/driveways-patios-glasgow.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Dedicated Clydebank Service Area Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/clydebank-landscaping.html</loc>
+        <lastmod>2026-07-31</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
 
