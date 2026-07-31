@@ -3016,3 +3016,78 @@ img:not([src]), img[src=""], img[src="about:blank"] {
         max-height: 280px !important;
     }
 }
+
+/* ===== HEADER SUB-TAGLINE (REF GLASGOW PAVING CO) ===== */
+.tw-header-tagline-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(203, 163, 113, 0.2);
+}
+
+/* ===== FLOATING GOOGLE REVIEWS BADGE (REF GLASGOW PAVING CO) ===== */
+.tw-floating-google-badge {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+}
+
+.tw-floating-google-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.tw-fgb-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tw-fgb-score {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f271d;
+    line-height: 1;
+}
+
+.tw-fgb-stars {
+    color: #f59e0b;
+    font-size: 0.78rem;
+    display: flex;
+    gap: 2px;
+}
+
+.tw-fgb-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #64748b;
+    display: block;
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .tw-floating-google-badge {
+        bottom: 74px;
+        left: 12px;
+        padding: 8px 12px;
+    }
+}
