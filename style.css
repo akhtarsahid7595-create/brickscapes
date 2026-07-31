@@ -853,7 +853,7 @@ ul { list-style: none; }
     color: #cba371;
 }
 
-/* ===== LUXURY SERVICES NAVIGATION DROPDOWN ===== */
+/* ===== CLEAN CLASSIC SERVICES NAVIGATION DROPDOWN (NO ICONS, BRAND FONTS) ===== */
 .tw-dropdown {
     position: relative;
     display: inline-block;
@@ -867,9 +867,9 @@ ul { list-style: none; }
 }
 
 .tw-drop-chevron {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: #cba371;
-    transition: transform 0.25s ease;
+    transition: transform 0.2s ease;
 }
 
 .tw-dropdown:hover .tw-drop-chevron {
@@ -880,18 +880,17 @@ ul { list-style: none; }
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(12px);
-    background: rgba(8, 23, 17, 0.96);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(203, 163, 113, 0.4);
-    border-radius: 16px;
-    padding: 12px;
-    width: 360px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(203, 163, 113, 0.15);
+    transform: translateX(-50%) translateY(8px);
+    background: #081711;
+    border: 1px solid rgba(203, 163, 113, 0.35);
+    border-top: 2px solid #cba371;
+    border-radius: 6px;
+    padding: 8px 0;
+    min-width: 270px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.2s ease;
     z-index: 1000;
 }
 
@@ -899,81 +898,34 @@ ul { list-style: none; }
 .tw-dropdown:focus-within .tw-dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(6px);
+    transform: translateX(-50%) translateY(4px);
 }
 
 .tw-drop-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 14px;
-    border-radius: 10px;
+    display: block;
+    padding: 10px 20px;
     text-decoration: none;
     transition: all 0.2s ease;
-    border-left: 3px solid transparent;
-}
-
-.tw-drop-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
-    background: rgba(203, 163, 113, 0.12);
-    border: 1px solid rgba(203, 163, 113, 0.3);
-    color: #cba371;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-    transition: all 0.2s ease;
-}
-
-.tw-drop-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    text-align: left;
 }
 
 .tw-drop-title {
-    font-family: var(--font-heading);
-    font-size: 0.92rem;
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    line-height: 1.2;
-    transition: color 0.2s ease;
-}
-
-.tw-drop-sub {
-    font-family: var(--font-body);
-    font-size: 0.76rem;
-    font-weight: 500;
-    color: #94a3b8;
-    line-height: 1.2;
-    text-transform: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s ease, padding 0.2s ease;
+    display: block;
 }
 
 .tw-drop-item:hover {
-    background: rgba(203, 163, 113, 0.14);
-    border-left: 3px solid #cba371;
-    transform: translateX(3px);
-}
-
-.tw-drop-item:hover .tw-drop-icon {
-    background: #cba371;
-    color: #0f271d;
-    border-color: #cba371;
-    box-shadow: 0 0 12px rgba(203, 163, 113, 0.5);
+    background: rgba(203, 163, 113, 0.12);
 }
 
 .tw-drop-item:hover .tw-drop-title {
     color: #cba371;
-}
-
-.tw-drop-item:hover .tw-drop-sub {
-    color: #cbd5e1;
+    padding-left: 6px;
 }
 
 /* HERO MAIN CENTERED CONTENT */
