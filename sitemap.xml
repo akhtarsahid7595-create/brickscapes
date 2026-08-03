@@ -39,7 +39,7 @@
     <!-- Artificial Grass Glasgow Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/artificial-grass-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2025-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -82,6 +82,32 @@
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
+    </url>
+
+    <!-- BLOG POSTS -->
+
+    <!-- Blog: Artificial Grass Cost Glasgow -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog/artificial-grass-cost-glasgow</loc>
+        <lastmod>2025-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- Blog: Artificial Grass Cleaning Glasgow -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog/artificial-grass-cleaning-glasgow</loc>
+        <lastmod>2025-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- Blog: Composite Decking Glasgow -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog/composite-decking-glasgow</loc>
+        <lastmod>2025-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
     </url>
 
 </urlset>
