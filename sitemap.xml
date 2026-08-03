@@ -7,7 +7,7 @@
     <!-- Home Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
@@ -15,7 +15,7 @@
     <!-- Dedicated Bricklaying & Retaining Walls Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/bricklaying-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
@@ -23,7 +23,7 @@
     <!-- Dedicated Driveways & Patios Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/driveways-patios-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
@@ -31,7 +31,7 @@
     <!-- Dedicated Clydebank Service Area Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/clydebank-landscaping</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -39,15 +39,15 @@
     <!-- Artificial Grass Glasgow Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/artificial-grass-glasgow</loc>
-        <lastmod>2025-08-03</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
 
-    <!-- Reppointing Glasgow Page -->
+    <!-- Composite Decking Glasgow Page -->
     <url>
-        <loc>https://brickscapeslandscaping.com/repointing-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <loc>https://brickscapeslandscaping.com/decking-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -55,7 +55,23 @@
     <!-- Fencing Glasgow Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/fencing-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Roughcasting Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/roughcasting-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Repointing Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/repointing-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -63,7 +79,7 @@
     <!-- Retaining Walls Glasgow Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/retaining-walls-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -71,15 +87,23 @@
     <!-- Garden Walls Glasgow Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/garden-walls-glasgow</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
+    </url>
+
+    <!-- House Extensions Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/house-extensions-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
     </url>
 
     <!-- Contact & Quote Page -->
     <url>
         <loc>https://brickscapeslandscaping.com/contact</loc>
-        <lastmod>2026-07-31</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
@@ -88,26 +112,26 @@
 
     <!-- Blog: Artificial Grass Cost Glasgow -->
     <url>
-        <loc>https://brickscapeslandscaping.com/blog/artificial-grass-cost-glasgow</loc>
-        <lastmod>2025-08-03</lastmod>
+        <loc>https://brickscapeslandscaping.com/blog-artificial-grass-cost-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
+        <priority>0.80</priority>
     </url>
 
     <!-- Blog: Artificial Grass Cleaning Glasgow -->
     <url>
-        <loc>https://brickscapeslandscaping.com/blog/artificial-grass-cleaning-glasgow</loc>
-        <lastmod>2025-08-03</lastmod>
+        <loc>https://brickscapeslandscaping.com/blog-artificial-grass-cleaning-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
+        <priority>0.80</priority>
     </url>
 
     <!-- Blog: Composite Decking Glasgow -->
     <url>
-        <loc>https://brickscapeslandscaping.com/blog/composite-decking-glasgow</loc>
-        <lastmod>2025-08-03</lastmod>
+        <loc>https://brickscapeslandscaping.com/blog-composite-decking-glasgow</loc>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
+        <priority>0.80</priority>
     </url>
 
 </urlset>
