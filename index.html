@@ -19,49 +19,56 @@
 
     <!-- JSON-LD LocalBusiness & Service Structured Data -->
     <script type="application/ld+json">
-    {
+{
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Brickscapes Limited",
-      "image": "https://brickscapeslandscaping.com/images/logo.webp",
-      "url": "https://brickscapeslandscaping.com/",
-      "telephone": "+447884248274",
-      "email": "brickscapes25@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Clydebank",
-        "addressRegion": "Glasgow",
-        "addressCountry": "UK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 55.9015,
-        "longitude": -4.4074
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:30",
-        "closes": "17:00"
-      },
-      "areaServed": [
-        "Glasgow",
-        "Clydebank",
-        "Bearsden",
-        "Milngavie",
-        "Dumbarton",
-        "Renfrew",
-        "Paisley",
-        "Newton Mearns"
-      ],
-      "priceRange": "££",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "5"
-      }
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://brickscapeslandscaping.com/#organization",
+          "name": "Brickscapes Limited",
+          "alternateName": "Brickscapes Glasgow & Clydebank",
+          "url": "https://brickscapeslandscaping.com/",
+          "logo": "https://brickscapeslandscaping.com/images/logo.webp",
+          "image": "https://brickscapeslandscaping.com/images/logo.webp",
+          "telephone": "+447884248274",
+          "email": "brickscapes25@gmail.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Joe Church",
+            "jobTitle": "Managing Director & Lead Mason"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Clydebank",
+            "addressRegion": "Glasgow",
+            "postalCode": "G81",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 55.9015,
+            "longitude": -4.4042
+          },
+          "areaServed": [
+            "Clydebank", "Glasgow", "Bearsden", "Milngavie", "Newton Mearns", "Partick", "Dumbarton", "Hardgate", "Duntocher"
+          ],
+          "knowsAbout": [
+            "Facing Brick Retaining Walls",
+            "Double-Skin Structural Masonry",
+            "Block Paving Driveways",
+            "Italian Vitrified Porcelain Patios",
+            "C25 Steel Reinforced Concrete Footings",
+            "SuDS Permeable Drainage Channels"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/brickscapes1/",
+            "https://www.facebook.com/p/Brickscapes-61578378958155/",
+            "https://wa.me/447884248274"
+          ]
+        }
+      ]
     }
-    </script>
+</script>
 
     <!-- Favicon -->
         <!-- Google Search & Mobile Favicons -->

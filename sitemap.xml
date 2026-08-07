@@ -134,4 +134,12 @@
         <priority>0.80</priority>
     </url>
 
+
+    <!-- Trade Data & Performance Guide Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/trade-data-guide</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
 </urlset>
