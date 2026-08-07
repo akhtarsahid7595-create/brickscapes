@@ -3893,22 +3893,34 @@ img {
     }
 }
 
-/* 7. Mobile Bottom Sticky Navigation Bar */
+/* 7. Mobile Bottom Sticky Navigation Bar (Strictly Hidden on Desktop) */
 .tw-mob-bar {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    height: 62px !important;
-    background: #091a13 !important;
-    border-top: 2px solid #cba371 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-around !important;
-    z-index: 99999 !important;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
-    padding: 0 4px !important;
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .tw-mob-bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 62px !important;
+        background: #091a13 !important;
+        border-top: 2px solid #cba371 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+        z-index: 99999 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
+        padding: 0 4px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .tw-mob-bar {
+        display: none !important;
+    }
 }
 
 .tw-mob-btn {
