@@ -150,4 +150,20 @@
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
+
+    <!-- Dedicated Block Paving Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/block-paving-glasgow</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- Dedicated Porcelain Patios Glasgow Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/porcelain-patios-glasgow</loc>
+        <lastmod>2026-08-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
 </urlset>
