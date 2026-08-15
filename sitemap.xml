@@ -166,4 +166,20 @@
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
+
+    <!-- Large Garden Design Ideas Scotland Blog -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog-large-garden-design-ideas-scotland</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Modern & Contemporary Garden Ideas UK Blog -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog-modern-contemporary-garden-ideas-glasgow</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 </urlset>
