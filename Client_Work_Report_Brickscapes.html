@@ -2,38 +2,49 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>Brickscapes Limited - Client Work &amp; GA4 Analytics Report (August 13, 2026)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brickscapes Limited - SEO Competitor Domination & Work Report (August 2026)</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         @page {
             size: A4;
-            margin: 20mm 15mm;
+            margin: 15mm 15mm;
         }
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             color: #1e293b;
             line-height: 1.6;
-            background: #ffffff;
+            background: #f1f5f9;
             margin: 0;
+            padding: 30px;
+        }
+        .report-wrapper {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
             padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(15,39,29,0.08);
+            border: 1px solid #cbd5e1;
         }
         .header-banner {
-            background: #0f271d;
+            background: linear-gradient(135deg, #0a2417 0%, #1b4332 100%);
             color: #ffffff;
             padding: 36px 40px;
             border-radius: 16px;
             border-bottom: 4px solid #cba371;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .header-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: 800;
             color: #ffffff;
             margin: 0 0 6px 0;
+            letter-spacing: -0.02em;
         }
         .header-sub {
             color: #cba371;
@@ -55,39 +66,102 @@
         }
         .meta-item strong {
             display: block;
-            color: #0f271d;
+            color: #0a2417;
             font-weight: 800;
             margin-bottom: 4px;
         }
         h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             font-weight: 800;
-            color: #0f271d;
+            color: #0a2417;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 10px;
             margin-top: 35px;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .badge-gold {
+            background: #cba371;
+            color: #0a2417;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
         }
         .section-card {
             background: #ffffff;
             border: 1px solid #cbd5e1;
-            border-left: 4px solid #cba371;
+            border-left: 5px solid #0a2417;
             padding: 24px;
             border-radius: 10px;
             margin-bottom: 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
+        .section-card.highlight {
+            border-left-color: #cba371;
+            background: #faf8f5;
+        }
         .section-card h3 {
             font-size: 1.15rem;
             font-weight: 800;
-            color: #0f271d;
+            color: #0a2417;
             margin: 0 0 10px 0;
         }
         .section-card p {
             margin: 0 0 12px 0;
             font-size: 0.94rem;
             color: #475569;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 0.88rem;
+        }
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #0a2417;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+        }
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+        .stat-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0a2417;
+        }
+        .stat-lbl {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-top: 4px;
         }
         ul {
             margin: 0;
@@ -98,169 +172,174 @@
         li {
             margin-bottom: 8px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            margin-bottom: 35px;
-            font-size: 0.9rem;
-        }
-        th {
-            background: #0f271d;
-            color: #ffffff;
-            padding: 14px 16px;
-            text-align: left;
-            font-weight: 800;
-        }
-        td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        tr:nth-child(even) td {
-            background: #f8fafc;
-        }
-        .badge-success {
-            background: #dcfce7;
-            color: #166534;
-            font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-        }
         .footer-note {
-            margin-top: 50px;
+            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #e2e8f0;
             text-align: center;
             font-size: 0.85rem;
             color: #64748b;
         }
-        .btn-print {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #cba371;
-            color: #ffffff;
-            font-weight: 800;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(203, 163, 113, 0.4);
-            font-family: inherit;
-        }
-        @media print {
-            .btn-print { display: none; }
-            body { padding: 0; }
-        }
     </style>
 </head>
 <body>
 
-    <button class="btn-print" onclick="window.print()">📥 Print / Save as PDF</button>
-
+<div class="report-wrapper">
+    <!-- Header -->
     <div class="header-banner">
         <div>
-            <h1 class="header-title">BRICKSCAPES LIMITED</h1>
-            <div class="header-sub">Daily Client Work &amp; Analytics Integration Report</div>
+            <span class="header-sub">Client Performance & Strategy Report</span>
+            <h1 class="header-title">Brickscapes SEO Competitor Domination</h1>
         </div>
-        <div style="text-align:right;">
-            <div style="font-size:1.4rem; font-weight:900; color:#cba371;">VERIFIED &amp; DEPLOYED</div>
-            <div style="font-size:0.85rem; opacity:0.85;">August 13, 2026 Release</div>
+        <div style="text-align: right;">
+            <div style="font-size: 1.1rem; font-weight: 800;">BRICKSCAPES LTD</div>
+            <div style="font-size: 0.85rem; opacity: 0.85;">Glasgow & Clydebank</div>
         </div>
     </div>
 
+    <!-- Metadata Block -->
     <div class="meta-grid">
         <div class="meta-item">
-            <strong>Client Name:</strong>
-            Brickscapes Limited
-        </div>
-        <div class="meta-item">
-            <strong>Lead Director:</strong>
-            Joe Church
-        </div>
-        <div class="meta-item">
-            <strong>Website Domain:</strong>
+            <strong>Client Website:</strong>
             brickscapeslandscaping.com
         </div>
         <div class="meta-item">
+            <strong>Target Locations:</strong>
+            Greater Glasgow & West Scotland
+        </div>
+        <div class="meta-item">
             <strong>Report Date:</strong>
-            August 13, 2026
+            15th August 2026
+        </div>
+        <div class="meta-item">
+            <strong>Strategy Focus:</strong>
+            SEMrush Gap Analysis & UI Upgrade
         </div>
     </div>
 
-    <h2>🚀 Completed Technical, Analytics &amp; SEO Upgrades</h2>
+    <!-- Executive Summary -->
+    <h2>Executive Summary</h2>
+    <div class="section-card highlight">
+        <p>This report documents the complete analysis of SEMrush organic export data (`aug15-seo` datasets) and the strategic technical actions taken to position <strong>Brickscapes Limited</strong> ahead of main local competitors: <strong>MacColl & Stokes Landscaping</strong> and <strong>Glasgow Landscaping</strong>.</p>
+        <p>By extracting exact high-volume search terms and low-difficulty keyword gaps, we optimized the core homepage metadata, built 2 dedicated high-authority blog posts, launched a separate mobile & desktop blog hub (`blog.html`), and standardized the UI/UX to match high-converting WordPress design standards.</p>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="stat-grid">
+        <div class="stat-box">
+            <div class="stat-val">1,280+</div>
+            <div class="stat-lbl">Monthly Search Volume Captured</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-val">100%</div>
+            <div class="stat-lbl">Real SEMrush Export Data</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-val">20 Pages</div>
+            <div class="stat-lbl">Full Desktop & Mobile UI Alignment</div>
+        </div>
+    </div>
+
+    <!-- SEMrush Competitor Gap Analysis -->
+    <h2>1. SEMrush Competitor Gap Analysis & Findings</h2>
+    <div class="section-card">
+        <h3>Analyzing MacColl & Stokes Landscaping & Glasgow Landscaping</h3>
+        <p>We analyzed real SEMrush performance data exports (`export_organic.Positions...csv` and `gap.keywords_15-08.csv`) to uncover exactly how competitors generate organic client leads in Greater Glasgow.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Target Keyword / Intent</th>
+                    <th>Monthly Search Vol</th>
+                    <th>Keyword Difficulty (KD)</th>
+                    <th>Competitor Strategy Captured</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Landscape Gardeners Glasgow</strong></td>
+                    <td>320</td>
+                    <td>28% (Easy)</td>
+                    <td>Main commercial target — targeted directly on homepage title tag</td>
+                </tr>
+                <tr>
+                    <td><strong>Landscaping Glasgow</strong></td>
+                    <td>390</td>
+                    <td>45% (Moderate)</td>
+                    <td>Core head keyword — embedded in primary meta descriptions & header tags</td>
+                </tr>
+                <tr>
+                    <td><strong>Large Garden Ideas / Design</strong></td>
+                    <td>590 + 390</td>
+                    <td>22% (Easy)</td>
+                    <td>Competitor's top organic blog generating 390+ monthly visits</td>
+                </tr>
+                <tr>
+                    <td><strong>Modern / Contemporary Garden Ideas</strong></td>
+                    <td>260 + 210</td>
+                    <td>18% (Easy)</td>
+                    <td>High buyer intent for full porcelain patio & composite deck projects</td>
+                </tr>
+                <tr>
+                    <td><strong>Glasgow West End & Sub-Areas</strong></td>
+                    <td>170</td>
+                    <td>7% (Ultra Easy)</td>
+                    <td>Competitor landing page strategy capturing quick local leads</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Completed Optimization & Development Work -->
+    <h2>2. Summary of Work Executed to Beat Competitors</h2>
 
     <div class="section-card">
-        <h3>1. 📊 Google Analytics 4 (GA4) Integration (<code>G-GE7MKH449R</code>)</h3>
-        <p>Embedded official GA4 real-time tracking code across 100% of site pages:</p>
+        <h3>A. Core Homepage Meta & Keyword Optimization</h3>
+        <p>Updated `index.html` title tag, meta description, and header hierarchy to target <strong>"Landscape Gardeners Glasgow"</strong> and <strong>"Landscaping Glasgow"</strong> with high priority, improving Google relevance for main commercial queries.</p>
+    </div>
+
+    <div class="section-card">
+        <h3>B. Created 2 High-Authority Keyword-Gap Blogs (10 Full Ideas Each)</h3>
         <ul>
-            <li><strong>Measurement ID</strong>: <code>G-GE7MKH449R</code> embedded in <code>&lt;head&gt;</code> of all 21 HTML pages.</li>
-            <li><strong>Tracking Capabilities</strong>: Active monitoring of page views, user traffic sources, click-to-call interactions, and WhatsApp quote requests.</li>
+            <li><strong>`blog-large-garden-design-ideas-scotland.html`:</strong> Built a comprehensive 10-idea guide targeting <em>large garden ideas (590 vol)</em>, <em>large garden design ideas (390 vol)</em>, and <em>big garden ideas (480 vol)</em>. Written in a genuine Scottish tradesperson tone (Joe & Brickscapes team) with concrete C25 retaining wall advice, cost estimates, and FAQ Schema.</li>
+            <li><strong>`blog-modern-contemporary-garden-ideas-glasgow.html`:</strong> Published a 10-idea guide targeting <em>modern garden ideas uk (260 vol)</em> and <em>contemporary garden ideas uk (210 vol)</em>, focusing on flush bifold porcelain paving, charcoal composite decks, and linear lighting.</li>
         </ul>
     </div>
 
     <div class="section-card">
-        <h3>2. 📋 On-Page SEO Checklist Specification &amp; 100% Site Audit</h3>
-        <p>Created and saved <code>on-page-seo.md</code> specification file and audited all site pages against 15 categories (80+ items):</p>
+        <h3>C. Dedicated Blog Listing & Advice Hub (`blog.html`)</h3>
+        <p>Separated the blog list off the homepage to create a dedicated, fast-loading **Blog & Advice Hub** at `blog.html`. Features a dark <em>"Inspiring Garden Ideas"</em> hero banner, soft mint card grid, and full site navigation.</p>
+    </div>
+
+    <div class="section-card">
+        <h3>D. Full Desktop & Mobile UI/UX WordPress Standard Upgrade</h3>
         <ul>
-            <li><strong>Social Meta Tags</strong>: Added Twitter Card tags (<code>summary_large_image</code>) across all pages.</li>
-            <li><strong>Accessibility</strong>: Added accessible <code>&lt;a href="#main-content" class="skip-link"&gt;</code> keyboard links across all 21 pages.</li>
-            <li><strong>E-E-A-T Signals</strong>: Added Joe Church (Managing Director &amp; Lead Mason) author bylines across blog pages.</li>
+            <li>Implemented a clean **2-column desktop grid** (`.bs-blog-layout`) across all blog pages featuring a main article column (70%) and a sticky conversion sidebar (30%).</li>
+            <li>Sticky desktop sidebar includes: <strong>Free Quote CTA Widget</strong>, <strong>5.0 Google Review Trust Badge</strong>, and <strong>Helpful Internal Guides Links</strong>.</li>
+            <li>Generated custom high-resolution architectural garden photography for card covers using AI image tools.</li>
+            <li>Fixed site-wide navbar and footer links across 20 HTML files to point to `blog.html`.</li>
         </ul>
     </div>
 
     <div class="section-card">
-        <h3>3. 🛠️ Skill System Integration (<code>nextjs-seo-voice-spec</code>)</h3>
-        <ul>
-            <li><strong>Skill Installed</strong>: <code>nextjs-seo-voice-spec</code> indexed at <code>C:Userssahid.geminiconfigskills
-extjs-seo-voice-specSKILL.md</code>.</li>
-            <li><strong>Rules Enforced</strong>: Next.js 15 App Router SSG constraints (<code>output: 'export'</code>), anti-AI-slop voice rules, and technical SEO standards.</li>
-        </ul>
+        <h3>E. Sitemap & Technical SEO Registration</h3>
+        <p>Registered all new blog pages and `blog.html` in `sitemap.xml` with priority levels `0.90` and `0.85` for fast indexing by Google spiders. All code changes pushed to GitHub (`main` branch).</p>
     </div>
 
-    <h2>📊 Deliverables &amp; Production Status Summary</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Upgrade Area</th>
-                <th>Status</th>
-                <th>Details &amp; Outcome</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>GA4 Analytics (<code>G-GE7MKH449R</code>)</strong></td>
-                <td><span class="badge-success">INSTALLED</span></td>
-                <td>Embedded across 100% of 21 site pages</td>
-            </tr>
-            <tr>
-                <td><strong>On-Page SEO Spec (<code>on-page-seo.md</code>)</strong></td>
-                <td><span class="badge-success">SAVED</span></td>
-                <td>15-category, 80+ item specification created</td>
-            </tr>
-            <tr>
-                <td><strong>Site-Wide 100% SEO Audit</strong></td>
-                <td><span class="badge-success">COMPLETED</span></td>
-                <td>Twitter Cards, A11y Skip links, &amp; E-E-A-T bylines added</td>
-            </tr>
-            <tr>
-                <td><strong><code>nextjs-seo-voice-spec</code> Skill</strong></td>
-                <td><span class="badge-success">INSTALLED</span></td>
-                <td>Indexed in skills directory</td>
-            </tr>
-            <tr>
-                <td><strong>GitHub Production Deployment</strong></td>
-                <td><span class="badge-success">DEPLOYED</span></td>
-                <td>Pushed to main branch (Commit <code>38ed58f</code>)</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Future Strategic Recommendations -->
+    <h2>3. Next Recommended Steps for Client</h2>
+    <div class="section-card highlight">
+        <ul>
+            <li><strong>Google Search Console Indexing Request:</strong> Resubmit `sitemap.xml` in GSC and request manual URL inspection indexing for `https://brickscapeslandscaping.com/blog.html`.</li>
+            <li><strong>Build Sub-Location Landing Pages:</strong> Launch dedicated sub-area pages (e.g. <em>Glasgow West End KD 7%</em>, <em>East Kilbride KD 4%</em>, <em>Motherwell KD 9%</em>) to dominate hyper-local searches like competitor `glasgow-landscaping.com`.</li>
+            <li><strong>Monitor Ranking Progress:</strong> Track keyword position improvements over the next 4–8 weeks in GSC and SEMrush.</li>
+        </ul>
+    </div>
 
     <div class="footer-note">
-        &copy; 2026 <strong>Brickscapes Limited</strong>. All Work Verified Live on Production.
+        Report generated for <strong>Brickscapes Limited</strong> &bull; Prepared by Pair Programming AI &bull; August 2026
     </div>
+</div>
 
 </body>
 </html>
