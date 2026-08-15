@@ -110,6 +110,14 @@
 
     <!-- BLOG POSTS -->
 
+    <!-- Main Blog Hub Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/blog</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
     <!-- Blog: Artificial Grass Cost Glasgow -->
     <url>
         <loc>https://brickscapeslandscaping.com/blog-artificial-grass-cost-glasgow</loc>
