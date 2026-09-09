@@ -4691,3 +4691,72 @@ img {
     font-size: 0.95rem;
 }
 
+/* ===== PROJECT SPOTLIGHT CARD ===== */
+.bs-project-box {
+    background: #f8faf9;
+    border: 1px solid #d1e5da;
+    border-radius: var(--radius-md);
+    padding: 1.8rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+}
+.bs-project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(203,163,113,0.3);
+}
+.bs-project-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--tw-forest);
+    margin: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+.bs-project-badge {
+    background: var(--tw-forest);
+    color: var(--tw-gold);
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-heading);
+}
+.bs-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 1.2rem 0;
+}
+.bs-spec-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+}
+.bs-spec-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--tw-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+    font-family: var(--font-heading);
+}
+.bs-spec-value {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--tw-forest);
+    font-weight: 700;
+}
+
+
