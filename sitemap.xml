@@ -190,4 +190,27 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+    <!-- Artificial Grass East Kilbride Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/artificial-grass-east-kilbride</loc>
+        <lastmod>2026-09-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Artificial Grass Hamilton Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/artificial-grass-hamilton</loc>
+        <lastmod>2026-09-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Artificial Grass Motherwell Page -->
+    <url>
+        <loc>https://brickscapeslandscaping.com/artificial-grass-motherwell</loc>
+        <lastmod>2026-09-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
 </urlset>
