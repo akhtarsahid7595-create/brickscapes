@@ -4790,3 +4790,25 @@ img {
         letter-spacing: 0.025em;
     }
 }
+
+/* Keep desktop dropdowns above hero content on every page */
+@media (min-width: 992px) {
+    .tw-hero-header {
+        position: relative;
+        z-index: 10000 !important;
+    }
+    .tw-center-subnav,
+    .tw-dropdown {
+        position: relative;
+        z-index: 10001;
+    }
+    .tw-dropdown-menu {
+        z-index: 10002 !important;
+        background: #081711 !important;
+        isolation: isolate;
+    }
+    .tw-dropdown-menu .tw-drop-item {
+        position: relative;
+        z-index: 10003;
+    }
+}
