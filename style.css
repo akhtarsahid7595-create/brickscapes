@@ -4757,3 +4757,36 @@ img {
 }
 
 
+/* Global navigation alignment fix - keeps existing URLs and SEO markup intact */
+@media (min-width: 992px) {
+    .tw-hero-header {
+        max-width: 1600px;
+        padding-left: clamp(22px, 4vw, 64px);
+        padding-right: clamp(22px, 4vw, 64px);
+    }
+    .tw-center-subnav {
+        flex-wrap: nowrap !important;
+        gap: clamp(12px, 1.7vw, 30px) !important;
+        white-space: nowrap;
+        width: 100%;
+    }
+    .tw-center-subnav .tw-subnav-link,
+    .tw-center-subnav .tw-dropdown-trigger {
+        font-size: clamp(0.72rem, 0.78vw, 0.88rem) !important;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .tw-center-subnav .tw-dropdown-menu {
+        white-space: normal;
+    }
+}
+@media (min-width: 992px) and (max-width: 1250px) {
+    .tw-center-subnav {
+        gap: 9px !important;
+    }
+    .tw-center-subnav .tw-subnav-link,
+    .tw-center-subnav .tw-dropdown-trigger {
+        font-size: 0.68rem !important;
+        letter-spacing: 0.025em;
+    }
+}
